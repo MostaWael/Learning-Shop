@@ -9,44 +9,73 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <!-- CSS Files -->
-  <link rel="stylesheet" href="CSS/all.min.css">
-  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="/Bootstarp/css/all.min.css">
+  <link rel="stylesheet" href="/Bootstarp/css/bootstrap.min.css">
   <link rel="stylesheet" href="CSS/learning-shop.css">
   <title>Not Academic</title>
 </head>
 <body>
   <!-- start navbar -->
-  <div class="navbar">
+  <nav class="navbar navbar-expand-lg pt-3 pb-3">
     <div class="container">
-      <div class="logo">
-        <a href="#">
-          <img src="" alt="Logo">
+      <div class="logo me-3">
+        <a class="navbar-brand" href="#">
+          <img src="" alt="logo">
         </a>
       </div>
-      <ul class="categories">
-        <li><a href="#">Home</a></li>
-        <li><a href="#" class="active">Not Academic</a></li>
-        <li><a href="#">Programming</a></li>
-        <li><a href="#">Problem Solving</a></li>
-        <li><a href="#">Self Study</a></li>
-      </ul>
-      <div class="user">
-        <div class="lightMode rounded-pill ps-1 pe-1 d-flex align-items-center position-relative">
-          <span class="icon_container d-flex align-items-center justify-content-center rounded-pill position-absolute">
-            <i class="icon-dark fa-solid fa-sun" data-dark="false"></i>
-          </span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars" style="color: var(--main-color);"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#" class="active">Not Academic</a></li>
+          <li class="nav-item"><a href="#">Programming</a></li>
+          <li class="nav-item"><a href="#">Problem Solving</a></li>
+          <li class="nav-item"><a href="#">Self Study</a></li>
+        </ul>
+        <div class="user d-flex gap-2 align-items-center ms-lg-4 justify-content-end">
+          <div class="lightMode rounded-pill ps-1 pe-1 d-flex align-items-center position-relative me-lg-3 me-auto">
+            <span class="icon_container d-flex align-items-center justify-content-center rounded-pill position-absolute moon_mode">
+              <i class="icon-dark fa-solid fa-moon" data-dark="true"></i>
+            </span>
+          </div>
+          <div class="picture-account">
+            <img src="/image/photo1.jpg" alt="user image" class="img-fluid rounded-pill">
+          </div>
+          <div class="username" style="color:var(--main-color);">Mohamed</div>
+          <div class="logout position-relative ms-1">Log out</div>
         </div>
-        <div class="picture-account">
-          <img src="" alt="user image">
-        </div>
-        <div class="username">Mohamed</div>
-        <div class="logout">Log out</div>
       </div>
     </div>
-  </div>
+  </nav>
   <!-- end navbar -->
-  <script src="JS/all.min.js"></script>
-  <script src="JS/bootstrap.bundle.min.js"></script>
+  <!-- start landing -->
+  <div class="landing pt-5">
+    <div class="container">
+      <div class="custom-header text-center d-flex align-items-center flex-column">
+        <h1 class="mb-3">Not Academic</h1>
+        <p class="w-75 lh-lg">There are many free online courses available for beginners that cover a wide range of topics such as web development, mobile application and Organizational Analysis, Agile.
+          Non-academic skills are key to success and include attributes such as self-discipline and persistence.
+          We are here to present to you a group of these distinguished courses
+        </p>
+      </div>
+      <form class="d-flex flex-column mt-5 m-auto align-items-center justify-content-center position-relative" role="search">
+        <label for="search" class="mb-4">
+          <h3 class="position-relative">
+            Search for Course
+          </h3>
+        </label>
+        <input id="search" class="form-control rounded-3" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- end landing -->
+  <script src="./Bootstarp/js/all.min.js"></script>
+  <script src="./Bootstarp/js/bootstrap.bundle.min.js"></script>
   <script src="JS/main.js"></script>
 </body>
 </html>
