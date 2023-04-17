@@ -1,0 +1,36 @@
+:root{
+  --main-color :#f538eb;
+  --black-color:#000;
+  --white-color:#fff;
+}
+
+body{
+  background-color: var(--white-color);
+}
+.lightMode{
+  width: 60px;
+  height: 30px;
+  background-color: #ebebeb;
+}
+.icon_container{
+  height: 90%;
+  width: 44%;
+  background-color: #fff;
+  box-shadow: 0 8px 40px rgba(0,0,0, .2);
+  cursor: pointer;
+  transition: transform .5s ease;
+}
+.fa-sun{
+  color: #FFDE59;
+}
+.animated{
+  animation: spin 0.5s;
+}
+@keyframes spin{
+  to {
+    transform: rotate(360deg);
+  }
+}
+.moon_mode{
+  transform: translateX(25px);
+}
