@@ -1,0 +1,29 @@
+#logo{
+    font-size: 30px;
+    color: var(--white);
+    /* font-size: 20px; */
+    line-height: 70px;
+    padding:0px 0px 0px 8vw;
+    font-weight: bold;
+}
+#mainInfo{
+    float: right;
+    /* margin-right:20px ; */
+    gap: 10px;
+}
+#mainInfo li a{
+    font-size: 13px;
+
+}
+#account{
+    margin-left: 20px;
+    margin-top: 8px;
+    height: 58px;
+    width: 58px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#accountInfo{
+    right: 0px;
+}

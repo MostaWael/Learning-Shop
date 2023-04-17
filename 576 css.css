@@ -1,0 +1,47 @@
+#optionbtn{
+    display: block;
+    margin-left: 50%;
+}
+#logo{
+    position: fixed;
+    color: var(--white);
+    font-size: 30px;
+    line-height: 70px;
+    padding:0px 0px 0px 0px;
+    margin-left: 50px;
+    font-weight: bold;
+}
+#mainInfo{
+    /* display: flex; */
+    position: fixed;
+     width: 100vw;
+     /* height: 100vh;  */
+    background: var(--sectionColor);
+    top :80px;
+    left:-100%; 
+    transition: all .5s;
+    text-align: center;
+}
+#mainInfo li{
+    text-align: center;
+    width: 100%;
+}
+nav ul#mainInfo li a{
+    font-size: 25px;
+    /* margin-bottom: -50px; */
+    /* right: 50px; */
+}
+.active,a:hover{
+    transform: none;
+}
+#option:checked ~ ul{
+    left:0;
+    /* gap: 0; */
+}
+#account{
+    display: none;
+    position: relative;
+}
+#accountInfo{
+    right: 0px;
+}
