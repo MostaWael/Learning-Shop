@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>back-End</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS Files -->
+
+    <link rel="stylesheet" href="../CSS/all.min.css">
+    <link rel="stylesheet" href="../Bootstarp/css/all.min.css">
+    <link rel="stylesheet" href="../Bootstarp/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../CSS/learning-shop.css">
+    <style>
+    :root{
+    --ColorOne:#f538eb;
+    --ColorTWO:#6C3483;
+    --ColorThree:#f4f6f75d;
+    --black-color:#000;
+    --white-color:#fff;
+    }
+    body{
+        background-color: var(--black-color);
+    }
+        .min-web{
+            border: 1px solid;
+            width: auto;
+            height: auto;
+            border-radius: 20px;
+            background-color:  var(--ColorThree) ;
+        }
+        .min-class-col{
+            border: 1px solid var(--ColorOne) ;
+            border-radius: 20px;
+            width: 200px;
+            height: auto;
+            text-align: center;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color:  var(--ColorThree);
+            color: var(--ColorOne);
+        } 
+        .min-class-col:hover{
+            background-color: var(--ColorTWO) ;
+            color:  var(--ColorThree);
+        }       
+        .min-class-rol{
+            justify-content: end;
+            justify-content: space-around;
+        }
+        .min-class-rol-2{
+            justify-content: end;
+            justify-content: space-around;
+            /* margin: 100px; */
+        }
+        .cardPage{
+        color: var(--white-color);
+        background-color: var(--black-color);
+        border: 2px solid var(--ColorOne);
+        transition: all 0.5s;
+        }
+        .cardPage:hover{
+        color: var(--ColorOne);
+        background-color: var(--white-color);
+        border: 2px solid var(--black-color);
+        transform: scale(1.05);
+        }
+        .cardPage:active {
+        transform: scale(0.95) rotateZ(1.7deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Start navbar -->
+    <nav class="navbar navbar-expand-lg pt-3 pb-3">
+        <div class="container">
+            <div class="logo me-3">
+            <a class="navbar-brand" href="#">
+                <img src="" alt="logo">
+            </a>
+            </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars" style="color: var(--main-color);"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#" class="active">Not Academic</a></li>
+            <li class="nav-item"><a href="#Programming">Programming</a></li>
+            <li class="nav-item"><a href="#">Problem Solving</a></li>
+            <li class="nav-item"><a href="#">Self Study</a></li>
+            </ul>
+            <div class="user d-flex gap-2 align-items-center ms-lg-4 justify-content-end">
+            <div class="lightMode rounded-pill ps-1 pe-1 d-flex align-items-center position-relative me-lg-3 me-auto">
+                <span class="icon_container d-flex align-items-center justify-content-center rounded-pill position-absolute moon_mode">
+                <i class="icon-dark fa-solid fa-moon" data-dark="true"></i>
+                </span>
+            </div>
+            <div class="picture-account">
+                <img src="../image/photo1.jpg" alt="user image" class="img-fluid rounded-pill">
+            </div>
+            <div class="username" style="color:var(--main-color);">Mohamed</div>
+            <div class="logout position-relative ms-1">Log out</div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!-- End navbar -->
+    <div class="container min-web " style="margin-top: 50px;" >
+    <div class="row sub-title text-center row-cols-1  row-cols-sm-2 row-cols-md-3 row-cols-lg-4" style="margin-top: 50px;" >
+        <div class="col ">
+            <h2 style="font-size: 40px;">Back-End</h2>
+        </div>
+    </div>        
+    <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3 row-cols-lg-3 m-2" style=" font-size: 30px;justify-content: center;">
+        <div class=" col-lg-3 m-2  card text-center p-5 cardPage" style="margin: 10px 0px;" onclick="window.location='./'"> PHP Developer</div>
+        <div class=" col-lg-3 m-2 card text-center p-5 cardPage" style="margin: 10px 0px;" onclick="window.location='./'">java Developer</div>
+        <div class=" col-lg-3 m-2 card text-center p-5 cardPage" style="margin: 10px 0px;"onclick="window.location='./'"> python Developer</div>
+        <div class=" col-lg-3 m-2 card text-center p-5 cardPage" style="margin: 10px 0px;"onclick="window.location='./'"> Node.js Developer</div>
+    </div>    
+</div>
+    <!-- end programming course-->
+    <script src="../Bootstarp/js/all.min.js"></script>
+    <script src="../Bootstarp/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/main.js"></script>
+    </body>
+</html>
