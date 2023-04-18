@@ -7,6 +7,10 @@
   --white-color:#fff;
   --black-light-color:#242424;
 }
+html{
+  user-select: none;
+  scroll-behavior: smooth;
+}
 body{
   font-family: 'Roboto', sans-serif;
   /* background-color: var(--black-color); */
@@ -46,9 +50,27 @@ a{
   text-decoration: none;
   color: var(--white-color);
 }
-/* .custom-header{
-
-} */
+.custom-header .title {
+  font-family: 'Alkatra', cursive;
+}
+.custom-header .title h1{
+  font-size: 60px;
+  padding: 8px;
+  position: relative;
+}
+.custom-header .title h1::before{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  left: 50%;
+  bottom: 0;
+  background-color: var(--main-color);
+  transform: translateX(-50%);
+}
+.custom-header p{
+  width: 75%;
+}
 /* start navbar */
 .navbar{
   background-color: var(--black-color);
@@ -139,3 +161,46 @@ a{
   }
 }
 /* end landing */
+/* start programming */
+.pro-course{
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+.pro-course .container{
+  border-top: 1px solid var(--main-color);
+}
+.sub-title{
+  font-family: 'Tilt Prism', cursive;
+  font-size: 60px;
+  color: #f538eb78;
+}
+.pro-course .courses{
+  min-height: 400px;
+  max-height: 500px ;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: scroll;
+}
+.pro-course .courses::-webkit-scrollbar {
+  display: none;
+}
+.pro-course .courses .course{
+  background-color: var(--black-light-color);
+  border: 1px solid var(--main-color);
+  transition: 0.5s;
+  flex-grow: 1;
+}
+.pro-course .courses .course h2{
+  font-family: 'Alkatra', cursive;
+}
+.pro-course .courses .course p{
+  color: var(--main-color);
+}
+.pro-course .courses .course li{
+  border-bottom: 1px solid;
+}
+.pro-course .courses .course:hover{
+  /* transform: scale(1.1); */
+  box-shadow: 0px 0px 19px -4px var(--main-color);
+}
+/* end programming */
