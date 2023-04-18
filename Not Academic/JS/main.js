@@ -1,4 +1,4 @@
-document.querySelector(".icon_container").onclick = function(){
+document.querySelector(".icon_container").onclick = function darkMode() {
   let icon = document.querySelector(".icon-dark");
   let isDark = icon.getAttribute("data-dark");
   icon.classList.add('animated');
