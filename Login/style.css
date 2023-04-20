@@ -51,12 +51,13 @@ a {
   font-size: 14px;
   text-decoration: none;
   margin: 15px 0;
+  transition: all 0.2s;
 }
 
 button {
   border-radius: 20px;
-  border: 1px solid #ff4b2b;
-  background-color: #ff4b2b;
+  border: 1px solid #f538eb;
+  background-color: #f538eb;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -173,8 +174,8 @@ input {
 
 .overlay {
   background: #ff416c;
-  background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
-  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  background: #f538eb; /*-webkit-linear-gradient(to right, #ff4b2b, #ff416c);*/
+  background: #f538eb; /*linear-gradient(to right, #ff4b2b, #ff416c);*/
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -261,4 +262,16 @@ footer i {
 footer a {
   color: #3c97bf;
   text-decoration: none;
+}
+
+.social-facebook:hover {
+  background-color: #4267b2;
+}
+
+.social-twiter:hover {
+  background-color: #1da1f2;
+}
+
+.social-linkedin:hover {
+  background-color: #0072b1;
 }
