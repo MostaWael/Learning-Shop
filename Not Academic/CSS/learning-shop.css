@@ -13,7 +13,7 @@ html{
 }
 body{
   font-family: 'Roboto', sans-serif;
-  /* background-color: var(--black-color); */
+  background-color: var(--black-color);
 }
 
 .lightMode{
@@ -280,3 +280,31 @@ a{
   flex-grow: 1;
 }
 /* end SS */
+/* start footer */
+footer{
+  background-color: var(--black-color);
+  font-size: 10px;
+}
+footer .container{
+  border-top: 2px solid var(--main-color);
+}
+footer ul li{
+  margin-top: 20px;
+}
+
+.social-container a {
+  border: 1px solid var(--white-color);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+  transition: 0.5s;
+}
+.social-container a:hover {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+/* end footer */
