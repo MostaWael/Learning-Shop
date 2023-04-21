@@ -26,11 +26,10 @@
 }
 
 .input-data input:focus ~ label {
-  transform: translate(0, -15px);
+  transform: translate(0, -15px) !important;
   font-size: 13px;
   color: #f538eb;
 }
-
 .inputs-container {
   margin-top: 20px;
   margin-bottom: 20px;
