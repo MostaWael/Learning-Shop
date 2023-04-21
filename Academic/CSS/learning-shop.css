@@ -169,14 +169,7 @@ a {
 .cs-course .courses {
   min-height: 400px;
   max-height: 500px;
-  /* scrollbar-width: none;
-  -ms-overflow-style: none;
-  overflow: scroll; */
 }
-
-/* .cs-course .courses::-webkit-scrollbar {
-  display: none;
-} */
 
 .cs-course .courses .course {
   background-color: var(--black-light-color);
@@ -212,7 +205,7 @@ a {
   font-weight: bold;
   cursor: pointer;
   /* background-color: var(--main-color);; */
-  min-width: 105px;
+  width: 105px;
   text-align: center;
   transition: 0.3s;
 }
