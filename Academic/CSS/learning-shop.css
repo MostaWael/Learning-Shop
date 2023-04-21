@@ -9,7 +9,7 @@
 }
 body {
   font-family: "Roboto", sans-serif;
-  /* background-color: var(--black-color); */
+  background-color: var(--black-color);
 }
 
 .lightMode {
@@ -147,3 +147,88 @@ a {
   }
 }
 /* end landing */
+
+/* CS */
+
+.cs-course {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+.cs-course .container {
+  border-top: 1px solid var(--main-color);
+}
+.title {
+  border-bottom: 1px solid #f538eb;
+}
+.sub-title {
+  font-family: Arial, Cocktail;
+  font-size: 60px;
+  color: #f538eb78;
+}
+
+.cs-course .courses {
+  min-height: 400px;
+  max-height: 500px;
+  /* scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: scroll; */
+}
+
+/* .cs-course .courses::-webkit-scrollbar {
+  display: none;
+} */
+
+.cs-course .courses .course {
+  background-color: var(--black-light-color);
+  border: 1px solid var(--main-color);
+  transition: 0.5s;
+  flex-grow: 1;
+}
+.cs-course .courses .course h2 {
+  font-family: Arial, Cocktail;
+}
+.cs-course .courses .course p {
+  color: var(--main-color);
+}
+
+.cs-course .courses .course li {
+  border-bottom: 1px solid;
+}
+.cs-course .courses .course:hover {
+  /* transform: scale(1.1); */
+  box-shadow: 0px 0px 19px -4px var(--main-color);
+}
+
+/* Courses */
+
+.switcher {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.switcher button {
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  /* background-color: var(--main-color);; */
+  min-width: 105px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.switcher button.active,
+.switcher button:hover,
+.switcher button:active {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.btn {
+  border: none;
+  background-color: var(--black-color);
+}
+
+.course{
+  max-width: 335px;
+}
