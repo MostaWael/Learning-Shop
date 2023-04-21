@@ -9,3 +9,11 @@ signUpButton.addEventListener("click", () => {
 signInButton.addEventListener("click", () => {
   container.classList.remove("right-panel-active");
 });
+
+function swapUp() {
+  document.querySelector(".container").style.cssText = "transform: rotateY(180deg)";
+}
+
+function swapIn() {
+  document.querySelector(".container").style.cssText = "transform: rotateY(0deg)";
+}
