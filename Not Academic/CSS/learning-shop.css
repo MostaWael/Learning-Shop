@@ -13,7 +13,7 @@ html{
 }
 body{
   font-family: 'Roboto', sans-serif;
-  /* background-color: var(--black-color); */
+  background-color: var(--black-color);
 }
 
 .lightMode{
@@ -185,6 +185,7 @@ a{
   overflow: scroll;
 }
 .pro-course .courses::-webkit-scrollbar {
+  scroll-behavior: smooth;
   display: none;
 }
 .pro-course .courses .course{
@@ -203,7 +204,108 @@ a{
   border-bottom: 1px solid;
 }
 .pro-course .courses .course:hover{
-  /* transform: scale(1.1); */
   box-shadow: 0px 0px 19px -4px var(--main-color);
 }
 /* end programming */
+/* start PS */
+.ps{
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+.ps .container{
+  border-top: 2px solid var(--main-color);
+}
+.ps .courses{
+  min-height: 400px;
+  max-height: 400px ;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: scroll;
+}
+.ps .courses::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  display: none;
+}
+.ps .courses .course h2{
+  font-family: 'Alkatra', cursive;
+}
+.ps .courses .course p{
+  color: var(--main-color);
+}
+.ps .courses .course li{
+  border-bottom: 1px solid;
+}
+.ps .courses .course:hover{
+  box-shadow: 0px 0px 19px -4px var(--main-color);
+}
+.ps .courses .course{
+  background-color: var(--black-light-color);
+  border: 1px solid var(--main-color);
+  transition: 0.5s;
+  flex-grow: 1;
+}
+/* end PS */
+/* start SS */
+.ss{
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+.ss .container{
+  border-top: 2px solid var(--main-color);
+}
+.ss .courses{
+  position: relative;
+  min-height: 300px;
+  max-height:  500px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+.ss .courses::-webkit-scrollbar {
+  display: none;
+}
+.ss .courses .course h2{
+  font-family: 'Alkatra', cursive;
+  text-align: center;
+}
+.ss .courses .course li{
+  border-bottom: 1px solid;
+}
+.ss .courses .course:hover{
+  box-shadow: 0px 0px 19px -4px var(--main-color);
+}
+.ss .courses .course{
+  background-color: var(--black-light-color);
+  border: 1px solid var(--main-color);
+  transition: 0.5s;
+  flex-grow: 1;
+}
+
+/* end SS */
+/* start footer */
+footer{
+  background-color: var(--black-color);
+  font-size: 10px;
+}
+footer .container{
+  border-top: 2px solid var(--main-color);
+}
+footer ul li{
+  margin-top: 20px;
+}
+
+.social-container a {
+  border: 1px solid var(--white-color);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+  transition: 0.5s;
+}
+.social-container a:hover {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+/* end footer */

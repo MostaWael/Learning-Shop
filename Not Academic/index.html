@@ -9,8 +9,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <!-- CSS Files -->
+<<<<<<< HEAD
   <link rel="stylesheet" href="./Bootstarp/css/all.min.css">
   <link rel="stylesheet" href="./Bootstarp/css/bootstrap.min.css">
+=======
+
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="../Bootstarp&icons/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/Bootstarp/css/all.min.css">
+  <link rel="stylesheet" href="/Bootstarp/css/bootstrap.min.css">
+
+>>>>>>> 310f74b19e8384e546decd4f58b3d2657b4a2262
   <link rel="stylesheet" href="CSS/learning-shop.css">
   <title>Not Academic</title>
 </head>
@@ -29,10 +39,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
           <li class="nav-item"><a href="#">Home</a></li>
-          <li class="nav-item"><a href="#" class="active">Not Academic</a></li>
+          <li class="nav-item"><a href="#" class="active">Professional Course</a></li>
           <li class="nav-item"><a href="#Programming">Programming</a></li>
-          <li class="nav-item"><a href="#">Problem Solving</a></li>
-          <li class="nav-item"><a href="#">Self Study</a></li>
+          <li class="nav-item"><a href="#PS">Problem Solving</a></li>
+          <li class="nav-item"><a href="#SS">Soft Skills</a></li>
         </ul>
         <div class="user d-flex gap-2 align-items-center ms-lg-4 justify-content-end">
           <div class="lightMode rounded-pill ps-1 pe-1 d-flex align-items-center position-relative me-lg-3 me-auto">
@@ -41,7 +51,7 @@
             </span>
           </div>
           <div class="picture-account">
-            <img src="/image/photo1.jpg" alt="user image" class="img-fluid rounded-pill">
+            <img src="./image/photo1.jpg" alt="user image" class="img-fluid rounded-pill">
           </div>
           <div class="username" style="color:var(--main-color);">Mohamed</div>
           <div class="logout position-relative ms-1">Log out</div>
@@ -85,25 +95,63 @@
       </div>
       <h1 class="sub-title text-center mt-3">Courses</h1>
       <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-4 courses p-5 gap-3">
-        <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
+        <!-- web Development -->
+        <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2" onclick="window.location='./WEB/web.html'">
           <h2>Web Development</h2>
-          <p>Frontend  Backend  UX</p>
+          <p>Frontend - Backend - DataBase</p>
           <ul class="text-white-50">
-            <li>Material for study</li>
-            <li>Questions</li>
-            <li>Exams</li>
+            <li>Lessons</li>
+            <li>Practices</li>
+            <li>Projects</li>
           </ul>
         </div>
-        <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
+        <!-- Mobile Application -->
+        <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2" onclick="window.location='./Mobile/mobile.html'">
           <h2>Mobile Application</h2>
-          <p>C#  C++</p>
+          <p>Native - Cross - Platform</p>
           <ul class="text-white-50">
-            <li>Material for study</li>
-            <li>Questions</li>
-            <li>Exams</li>
+            <li>Lessons</li>
+            <li>Practices</li>
+            <li>Projects</li>
           </ul>
         </div>
         <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
+          <h2>Machine Learning</h2>
+          <p>-  -  -</p>
+          <ul class="text-white-50">
+            <li>Lessons</li>
+            <li>Practices</li>
+            <li>Projects</li>
+          </ul>
+        </div>
+        <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
+          <h2>Artificial Intelligence</h2>
+          <p>-  -  -</p>
+          <ul class="text-white-50">
+            <li>Lessons</li>
+            <li>Practices</li>
+            <li>Projects</li>
+          </ul>
+        </div>
+        <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
+          <h2>Cyber ​​Security</h2>
+          <p>-  -  -</p>
+          <ul class="text-white-50">
+            <li>Lessons</li>
+            <li>Practices</li>
+            <li>Projects</li>
+          </ul>
+        </div>
+        <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
+          <h2>Data Analysis</h2>
+          <p>-  -  -</p>
+          <ul class="text-white-50">
+            <li>Lessons</li>
+            <li>Practices</li>
+            <li>Projects</li>
+          </ul>
+        </div>
+        <!-- <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
           <h2>Web Development</h2>
           <p>Frontend  Backend  UX</p>
           <ul class="text-white-50">
@@ -111,8 +159,8 @@
             <li>Questions</li>
             <li>Exams</li>
           </ul>
-        </div>
-        <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
+        </div> -->
+        <!-- <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
           <h2>Web Development</h2>
           <p>Frontend  Backend  UX</p>
           <ul class="text-white-50">
@@ -120,8 +168,8 @@
             <li>Questions</li>
             <li>Exams</li>
           </ul>
-        </div>
-        <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
+        </div> -->
+        <!-- <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
           <h2>Web Development</h2>
           <p>Frontend  Backend  UX</p>
           <ul class="text-white-50">
@@ -129,47 +177,121 @@
             <li>Questions</li>
             <li>Exams</li>
           </ul>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <!-- end programming course-->
+  <!-- start PS -->
+  <div id="PS" class="ps">
+    <div class="container pt-5">
+      <div class="custom-header d-flex align-items-center flex-column text-center ">
+        <div class="title">
+          <h1>Problem Solving</h1>
         </div>
+        <p class="mt-4">And because we know the importance of problem solving, we decided to put this section interested in teaching you problem solving. Because it is a basic skill in any programmer, which makes it easier for you to learn any technology afterwards.</p>
+      </div>
+      <h1 class="sub-title text-center mt-3">Courses</h1>
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-4 courses p-5 gap-3">
         <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
-          <h2>Web Development</h2>
-          <p>Frontend  Backend  UX</p>
+          <h2>Level one</h2>
           <ul class="text-white-50">
-            <li>Material for study</li>
-            <li>Questions</li>
-            <li>Exams</li>
+            <li>introduction of Programming</li>
+            <li>Data Type</li>
+            <li>IF, Loop</li>
+            <li>Array, Function</li>
+            <li>Recursion</li>
           </ul>
         </div>
         <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
-          <h2>Web Development</h2>
-          <p>Frontend  Backend  UX</p>
+          <h2>Level Two</h2>
           <ul class="text-white-50">
-            <li>Material for study</li>
-            <li>Questions</li>
-            <li>Exams</li>
+            <li>BackTrack</li>
+            <li>STLs</li>
+            <li>Two Pointer</li>
+            <li>Binary Search</li>
+            <li>Bits, BitMask</li>
           </ul>
         </div>
         <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
-          <h2>Web Development</h2>
-          <p>Frontend  Backend  UX</p>
+          <h2>Level Three</h2>
           <ul class="text-white-50">
-            <li>Material for study</li>
-            <li>Questions</li>
-            <li>Exams</li>
-          </ul>
-        </div>
-        <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
-          <h2>Web Development</h2>
-          <p>Frontend  Backend  UX</p>
-          <ul class="text-white-50">
-            <li>Material for study</li>
-            <li>Questions</li>
-            <li>Exams</li>
+            <li>Recursive DP, iterative DP</li>
+            <li>Graph Algorithm</li>
+            <li>String Hashing</li>
+            <li>KMP, KMP with DP</li>
+            <li>Tri</li>
+            <li>Segment Tree</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-  <!-- end programming course-->
+  <!-- end PS -->
+  <!-- start self study -->
+  <div id="SS" class="ss">
+    <div class="container pt-5">
+      <div class="custom-header d-flex align-items-center flex-column text-center ">
+        <div class="title">
+          <h1>Soft Skills</h1>
+        </div>
+        <p class="mt-4">Soft skills are abilities that consist of your attitude, personality traits, and behaviors. These skills influence how you perform a role and interact with other people, especially in the workplace. Simply relying on technical skills alone is not enough in succeeding at work. Without soft skills, you’ll fail to efficiently adapt to the various factors and circumstances that influence your job and the business.</p>
+      </div>
+    </div>
+    <h1 class="sub-title text-center mt-3">Courses</h1>
+    <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 courses m-5 mb-0 gap-3">
+      <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
+        <h2>Speaking with Confidence</h2>
+        <p class="d-block">The Speaking with Confidence course is available for free in EdApp’s editable course library. An aspect of confidence is being a good conversationalist, which is a crucial skill in many professions. With that, EdApp designed this course to help your employees gain a level of confidence when speaking by providing tips and techniques in holding better conversations. </p>
+      </div>
+      <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
+        <h2>Problem Solver</h2>
+        <p>The Leadership Skills course, which is part of the Youth Entrepreneurship series created by UNITAR in EdApp, is a leadership development program that covers the most essential leadership skills in entrepreneurship. It includes lessons on communication. leadership, and efficiency. By developing these skills among your employees, you’re able to support them in making a significant impact on your business. By the end of this course, there’s a summary and quiz available to reinforce key learnings from the entire Youth Entrepreneurship series.</p>
+      </div>
+      <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
+        <h2>Getting your Voice Heard</h2>
+        <p>Being assertive is a vital aspect of communication, so this course is designed to demonstrate a better approach to expressing themselves. In this public speaking training course, your employees will learn how to communicate assertively while still respecting the beliefs and values of their audience. By understanding the importance of assertiveness in public speaking, your employees will carry out presentations, lead meetings, or pitch proposals more effectively. This can lead to extended or new business opportunities for your company.</p>
+      </div>
+      <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
+        <h2>Youth Entrepreneurship: Leadership Skills</h2>
+        <p>Sometimes selfishness prevents us from seeing why other people may need our help. This Understanding Your Team’s Perspective course highlights the perspective of someone needing assistance. By looking at teamwork from that angle, employees will think twice about saying no to their colleague when they get asked to help with something.</p>
+      </div>
+      <div class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2">
+        <h2>Understanding Your Team’s Perspective</h2>
+        <p>As an HR or L&D professional, you want to give your employees the knowledge they need to be problem solvers. Problem-solving is a life skill that directly correlates with the area of soft skills. Arm your employees with one of the most valuable interpersonal skills by tackling difficult situations and reaching a positive outcome. Regardless of whether you use the Problem Solver course in its current format or tweak it, it will be sure to help everyone get along better.</p>
+      </div>
+    </div>
+  </div>
+  <!-- end self study -->
+  <!-- Start footer -->
+  <footer >
+    <div class="container mt-5 pt-3 d-flex flex-column flex-lg-row justify-content-center gap-2 gap-lg-5 text-white-50 align-items-center">
+      <div class="logo">
+        <a href="#"><img src="" alt="Logo"></a>
+      </div>
+      <ul class="list-unstyled d-flex gap-2">
+        <li><a href="#" class="text-white-50">Programming Course</a></li>
+        <li><a href="#" class="text-white-50">Problem Solving Training</a></li>
+        <li><a href="#" class="text-white-50">Soft Skills Courses</a></li>
+      </ul>
+      <div class="team">
+        <a href="#">Our Team</a>
+      </div>
+      <div class="social-container m-2">
+        <a href="https://www.facebook.com/FreeWebsiteCode/" class="social">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/freewebsitecode" class="social">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/freewebsitecode/" class="social">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+    <p class="text-white-50 text-center">&copy; 2023 <span>Leon</span> All Right Reserved</p>
+  </footer>
+  <!-- end footer -->
   <script src="./Bootstarp/js/all.min.js"></script>
   <script src="./Bootstarp/js/bootstrap.bundle.min.js"></script>
   <script src="JS/main.js"></script>
