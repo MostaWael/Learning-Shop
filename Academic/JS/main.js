@@ -21,15 +21,35 @@ document.querySelector(".icon_container").onclick = function darkMode() {
   }
   icon.setAttribute("data-dark", isDark == "true" ? "false" : "true");
   console.log(isDark);
-<<<<<<< HEAD
-  setTimeout( () => {
-    icon.classList.remove('animated');
-  }, 500)
-}
-
-=======
   setTimeout(() => {
     icon.classList.remove("animated");
   }, 500);
 };
->>>>>>> 088f89eb57732eaa7d4f32576cdd718fa027b8db
+
+// Courses Filtering
+
+let switcherLis = document.querySelectorAll(".switcher button");
+let cards = Array.from(document.querySelectorAll(".course"));
+
+switcherLis.forEach((li) => {
+  li.addEventListener("click", removeActive);
+  li.addEventListener("click", manageImgs);
+});
+
+// Remove Active Class From All Lis And Add To Current
+function removeActive() {
+  switcherLis.forEach((b) => {
+    b.classList.remove("active");
+    this.classList.add("active");
+  });
+}
+
+// Manage cards
+function manageImgs() {
+  cards.forEach((c) => {
+    c.style.setProperty("display", "none", "important");
+  });
+  document.querySelectorAll(this.dataset.cat).forEach((el) => {
+    el.style.display = "block";
+  });
+}

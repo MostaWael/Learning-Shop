@@ -7,15 +7,21 @@
   --white-color:#fff;
   --black-light-color:#242424;
 }
+html{
+  user-select: none;
+  scroll-behavior: smooth;
+}
 body{
   font-family: 'Roboto', sans-serif;
-  /* background-color: var(--black-color); */
+  background-color: var(--black-color);
 }
+
 .lightMode{
   width: 60px;
   height: 30px;
   background-color: var(--black-light-color);
 }
+
 .icon_container{
   height: 90%;
   width: 44%;
@@ -24,6 +30,7 @@ body{
   cursor: pointer;
   transition: transform .5s ease;
 }
+
 .fa-sun{
   color: #FFDE59;
 }
@@ -46,9 +53,27 @@ a{
   text-decoration: none;
   color: var(--white-color);
 }
-/* .custom-header{
-
-} */
+.custom-header .title {
+  font-family: 'Alkatra', cursive;
+}
+.custom-header .title h1{
+  font-size: 60px;
+  padding: 8px;
+  position: relative;
+}
+.custom-header .title h1::before{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  left: 50%;
+  bottom: 0;
+  background-color: var(--main-color);
+  transform: translateX(-50%);
+}
+.custom-header p{
+  width: 75%;
+}
 /* start navbar */
 .navbar{
   background-color: var(--black-color);
@@ -139,3 +164,148 @@ a{
   }
 }
 /* end landing */
+/* start programming */
+.pro-course{
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+.pro-course .container{
+  border-top: 1px solid var(--main-color);
+}
+.sub-title{
+  font-family: 'Tilt Prism', cursive;
+  font-size: 60px;
+  color: #f538eb78;
+}
+.pro-course .courses{
+  min-height: 400px;
+  max-height: 500px ;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: scroll;
+}
+.pro-course .courses::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  display: none;
+}
+.pro-course .courses .course{
+  background-color: var(--black-light-color);
+  border: 1px solid var(--main-color);
+  transition: 0.5s;
+  flex-grow: 1;
+}
+.pro-course .courses .course h2{
+  font-family: 'Alkatra', cursive;
+}
+.pro-course .courses .course p{
+  color: var(--main-color);
+}
+.pro-course .courses .course li{
+  border-bottom: 1px solid;
+}
+.pro-course .courses .course:hover{
+  box-shadow: 0px 0px 19px -4px var(--main-color);
+}
+/* end programming */
+/* start PS */
+.ps{
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+.ps .container{
+  border-top: 2px solid var(--main-color);
+}
+.ps .courses{
+  min-height: 400px;
+  max-height: 400px ;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: scroll;
+}
+.ps .courses::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  display: none;
+}
+.ps .courses .course h2{
+  font-family: 'Alkatra', cursive;
+}
+.ps .courses .course p{
+  color: var(--main-color);
+}
+.ps .courses .course li{
+  border-bottom: 1px solid;
+}
+.ps .courses .course:hover{
+  box-shadow: 0px 0px 19px -4px var(--main-color);
+}
+.ps .courses .course{
+  background-color: var(--black-light-color);
+  border: 1px solid var(--main-color);
+  transition: 0.5s;
+  flex-grow: 1;
+}
+/* end PS */
+/* start SS */
+.ss{
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+.ss .container{
+  border-top: 2px solid var(--main-color);
+}
+.ss .courses{
+  position: relative;
+  min-height: 300px;
+  max-height:  500px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+.ss .courses::-webkit-scrollbar {
+  display: none;
+}
+.ss .courses .course h2{
+  font-family: 'Alkatra', cursive;
+  text-align: center;
+}
+.ss .courses .course li{
+  border-bottom: 1px solid;
+}
+.ss .courses .course:hover{
+  box-shadow: 0px 0px 19px -4px var(--main-color);
+}
+.ss .courses .course{
+  background-color: var(--black-light-color);
+  border: 1px solid var(--main-color);
+  transition: 0.5s;
+  flex-grow: 1;
+}
+
+/* end SS */
+/* start footer */
+footer{
+  background-color: var(--black-color);
+  font-size: 10px;
+}
+footer .container{
+  border-top: 2px solid var(--main-color);
+}
+footer ul li{
+  margin-top: 20px;
+}
+
+.social-container a {
+  border: 1px solid var(--white-color);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+  transition: 0.5s;
+}
+.social-container a:hover {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+/* end footer */

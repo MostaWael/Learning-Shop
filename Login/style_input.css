@@ -3,15 +3,17 @@
   width: 100%;
   background-color: var(--light-black);
   border: none;
-  font-size: 17px;
+  font-size: 16px;
   border-bottom: 2px solid silver;
+  outline: none;
+  color: white;
 }
 
 .input-data {
   position: relative;
   height: 20px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .input-data label {
@@ -24,12 +26,46 @@
 }
 
 .input-data input:focus ~ label {
-  transform: translate(0, -20px);
+  transform: translate(0, -15px) !important;
   font-size: 13px;
-  color: #4158d0;
+  color: #f538eb;
 }
-
 .inputs-container {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+/* Custom Media */
+@media (max-width: 991px) {
+  .regester{
+    display: inline-block !important;
+  }
+  .overlay-container{
+    display: none;
+  }
+  .parent{
+    perspective: 800px;
+  }
+  /* .parent:hover > .container {
+    cursor: pointer;
+    transform: rotateY(180deg);
+  } */
+  .container {
+    overflow: visible !important;
+    width: 400px !important;
+    position: relative !important;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+  }
+  .sign-up-container,
+  .sign-in-container {
+    width: 100% !important;
+    position: absolute !important;
+    backface-visibility: hidden !important;
+  }
+  .sign-up-container {
+    opacity: 1 !important;
+    z-index: 0 !important;
+    transform: rotateY(180deg);
+  }
 }

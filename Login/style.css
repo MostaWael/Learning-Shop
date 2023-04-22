@@ -9,6 +9,7 @@
   --dark: #151515;
   --white: white;
   --light-black: #292929;
+  --main-color:#f538eb;
 }
 * {
   box-sizing: border-box;
@@ -22,7 +23,7 @@ body {
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   height: 95vh;
-  /*margin: -20px 0 50px;*/
+  /*margin: -20px 0 50px; */
 }
 
 h1 {
@@ -51,12 +52,13 @@ a {
   font-size: 14px;
   text-decoration: none;
   margin: 15px 0;
+  transition: all 0.2s;
 }
 
 button {
   border-radius: 20px;
-  border: 1px solid #ff4b2b;
-  background-color: #ff4b2b;
+  border: 1px solid #f538eb;
+  background-color: #f538eb;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -107,7 +109,7 @@ input {
   position: relative;
   overflow: hidden;
   width: 768px;
-  max-width: 100%;
+  /* max-width: 100%; */
   min-height: 480px;
 }
 
@@ -173,8 +175,8 @@ input {
 
 .overlay {
   background: #ff416c;
-  background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
-  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  background: #f538eb; /*-webkit-linear-gradient(to right, #ff4b2b, #ff416c);*/
+  background: #f538eb; /*linear-gradient(to right, #ff4b2b, #ff416c);*/
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -261,4 +263,33 @@ footer i {
 footer a {
   color: #3c97bf;
   text-decoration: none;
+}
+
+.social-facebook:hover {
+  background-color: #4267b2;
+  border-color: #4267b2;
+}
+
+.social-twiter:hover {
+  background-color: #1da1f2;
+  border-color:#1da1f2 ;
+}
+
+.social-linkedin:hover {
+  background-color: #0072b1;
+  border-color: #0072b1;
+}
+
+
+
+.regester{
+  display: none;
+  margin-top: 10px;
+  font-size: 10px;
+}
+.regester > span{
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--main-color);
 }

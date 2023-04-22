@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./Bootstarp/css/all.min.css" />
+    <link rel="stylesheet" href="./Bootstarp/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/learning-shop.css" />
+    <title>Academic</title>
+  </head>
+  <body>
+    <!-- start navbar -->
+    <nav class="navbar navbar-expand-lg pt-3 pb-3">
+      <div class="container">
+        <div class="logo me-3">
+          <a class="navbar-brand" href="#">
+            <img src="" alt="logo" />
+          </a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars" style="color: var(--main-color)"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item">
+              <a href="#" class="active">General</a>
+            </li>
+            <li class="nav-item"><a href="#CS">CS</a></li>
+            <li class="nav-item"><a href="#">AI</a></li>
+            <li class="nav-item"><a href="#">IT</a></li>
+            <li class="nav-item"><a href="#">IS</a></li>
+          </ul>
+          <div
+            class="user d-flex gap-2 align-items-center ms-lg-4 justify-content-end"
+          >
+            <div
+              class="lightMode rounded-pill ps-1 pe-1 d-flex align-items-center position-relative me-lg-3 me-auto"
+            >
+              <span
+                class="icon_container d-flex align-items-center justify-content-center rounded-pill position-absolute moon_mode"
+              >
+                <i class="icon-dark fa-solid fa-moon" data-dark="true"></i>
+              </span>
+            </div>
+            <div class="picture-account">
+              <img
+                src="/image/photo1.jpg"
+                alt="user image"
+                class="img-fluid rounded-pill"
+              />
+            </div>
+            <div class="username" style="color: var(--main-color)">Mohamed</div>
+            <div class="logout position-relative ms-1">Log out</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+    <!-- start landing -->
+    <div class="landing pt-5">
+      <div class="container">
+        <div
+          class="custom-header text-center d-flex align-items-center flex-column"
+        >
+          <h1 class="mb-3">Academic Courses</h1>
+          <p class="w-75 lh-lg">
+            Are you a computer science or AI student looking to expand your
+            knowledge and skills? Our free academic online courses offer
+            high-quality education from top universities and professors around
+            the world. With a wide range of topics and skill levels available,
+            you'll have access to the latest research and cutting-edge
+            techniques in your field.
+          </p>
+        </div>
+        <form
+          class="d-flex flex-column mt-5 m-auto align-items-center justify-content-center position-relative"
+          role="search"
+        >
+          <label for="search" class="mb-4">
+            <h3 class="position-relative">Search for Course</h3>
+          </label>
+          <input
+            id="search"
+            class="form-control rounded-3"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="CS" class="cs-course">
+      <div class="container pt-5">
+        <div
+          class="switcher d-flex mt-5 m-auto align-items-center justify-content-center"
+        >
+          <button data-cat=".all" class="btn active">General</button>
+          <button data-cat=".cs" class="btn">CS</button>
+          <button data-cat=".ai" class="btn">AI</button>
+          <button data-cat=".it" class="btn">IT</button>
+          <button data-cat=".is" class="btn">IS</button>
+        </div>
+        <!-- <div
+          class="custom-header d-flex align-items-center flex-column text-center cs"
+        >
+          <div class="title">
+            <h1>Computer Science</h1>
+          </div>
+          <p class="mt-4">
+            Our computer science courses provide students with a comprehensive
+            understanding of computer systems, programming languages,
+            algorithms, data structures, and more. Our courses are designed to
+            equip students with practical skills and theoretical knowledge that
+            are essential for a career in the tech industry.
+          </p>
+        </div> 
+        <h1 class="sub-title text-center mt-3">Courses</h1> -->
+
+        <div
+          class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-4 courses p-5 gap-3"
+        >
+          <div
+            class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2 all cs"
+          >
+            <h2>Data Structure</h2>
+            <p>Stack Queue Graph Tree</p>
+            <ul class="text-white-50">
+              <li>Material for study</li>
+              <li>Questions</li>
+              <li>Exams</li>
+            </ul>
+          </div>
+          <div
+            class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2 all cs"
+          >
+            <h2>Operating System</h2>
+            <p>Security Memory Management</p>
+            <ul class="text-white-50">
+              <li>Material for study</li>
+              <li>Questions</li>
+              <li>Exams</li>
+            </ul>
+          </div>
+          <div
+            class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2 all cs ai is"
+          >
+            <h2>Data Base</h2>
+            <p>RDBMS Normalization Indexing</p>
+            <ul class="text-white-50">
+              <li>Material for study</li>
+              <li>Questions</li>
+              <li>Exams</li>
+            </ul>
+          </div>
+          <div
+            class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2 all cs"
+          >
+            <h2>Data Structure</h2>
+            <p>Stack Queue Graph Tree</p>
+            <ul class="text-white-50">
+              <li>Material for study</li>
+              <li>Questions</li>
+              <li>Exams</li>
+            </ul>
+          </div>
+          <div
+            class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2 all cs"
+          >
+            <h2>Data Structure</h2>
+            <p>Stack Queue Graph Tree</p>
+            <ul class="text-white-50">
+              <li>Material for study</li>
+              <li>Questions</li>
+              <li>Exams</li>
+            </ul>
+          </div>
+          <div
+            class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2 all ai"
+          >
+            <h2>Python</h2>
+            <p>Basics oop Data Structure</p>
+            <ul class="text-white-50">
+              <li>Material for study</li>
+              <li>Questions</li>
+              <li>Exams</li>
+            </ul>
+          </div>
+          <div
+            class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2 cs all ai"
+          >
+            <h2>Machine Learning</h2>
+            <p>NLP Neural Networks Deep Learning</p>
+            <ul class="text-white-50">
+              <li>Material for study</li>
+              <li>Questions</li>
+              <li>Exams</li>
+            </ul>
+          </div>
+
+          <div
+            class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2 all it"
+          >
+            <h2>Networks</h2>
+            <p>WAN Infrastructure Securitty</p>
+            <ul class="text-white-50">
+              <li>Material for study</li>
+              <li>Questions</li>
+              <li>Exams</li>
+            </ul>
+          </div>
+          <div
+            class="course col p-3 pt-5 rounded-2 d-flex flex-column gap-2 all cs"
+          >
+            <h2>Operating System</h2>
+            <p>Security Memory Management</p>
+            <ul class="text-white-50">
+              <li>Material for study</li>
+              <li>Questions</li>
+              <li>Exams</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Start footer -->
+  <!-- <footer >
+    <div class="container mt-5 pt-3 d-flex flex-column flex-lg-row justify-content-center gap-2 gap-lg-5 text-white-50 align-items-center">
+      <div class="logo">
+        <a href="#"><img src="" alt="Logo"></a>
+      </div>
+      <ul class="list-unstyled d-flex gap-2">
+        <li><a href="#" class="text-white-50">Programming Course</a></li>
+        <li><a href="#" class="text-white-50">Problem Solving Training</a></li>
+        <li><a href="#" class="text-white-50">Soft Skills Courses</a></li>
+      </ul>
+      <div class="team">
+        <a href="#">Our Team</a>
+      </div>
+      <div class="social-container m-2">
+        <a href="https://www.facebook.com/FreeWebsiteCode/" class="social">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/freewebsitecode" class="social">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/freewebsitecode/" class="social">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+    <p class="text-white-50 text-center">&copy; 2023 <span>Leon</span> All Right Reserved</p>
+  </footer> -->
+  <!-- end footer -->
+
+    <script src="./Bootstarp/js/all.min.js"></script>
+    <script src="./Bootstarp/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+  </body>
+</html>
