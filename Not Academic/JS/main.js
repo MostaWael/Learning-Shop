@@ -28,18 +28,11 @@ document.querySelector(".icon_container").onclick = function darkMode() {
   }
   icon.setAttribute("data-dark", isDark == "true" ? "false" : "true");
   console.log(isDark);
-<<<<<<< HEAD
   setTimeout( () => {
     icon.classList.remove('animated');
   }, 500)
 }
 
-=======
   setTimeout(() => {
     icon.classList.remove("animated");
   }, 500);
-};
-<<<<<<< HEAD
-=======
->>>>>>> 088f89eb57732eaa7d4f32576cdd718fa027b8db
->>>>>>> 344dcf0bbc243ba486051a65095466e8c601ae8d
