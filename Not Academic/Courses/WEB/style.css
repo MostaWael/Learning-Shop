@@ -1,0 +1,220 @@
+/* web page */
+:root {
+  --ColorOne: #f538eb;
+  --ColorTWO: #6c3483;
+  --ColorThree: #f4f6f75d;
+  --black-color: #000;
+  --white-color: #fff;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--black-color);
+}
+
+.btn1 {
+  font-family: "Courier New", Courier, monospace;
+  /* letter-spacing: 2px; */
+  word-spacing: 5px;
+  font-weight: 700;
+  border: none;
+}
+.header .title {
+  font-family: "Alkatra", cursive;
+}
+.header .title {
+  font-size: 60px;
+}
+
+.main-title {
+  text-align: center;
+  font-family: "Alkatra", cursive;
+  text-transform: uppercase;
+  margin: 0 auto;
+  border: 2px solid var(--main-color);
+  padding: 10px 20px;
+  font-size: 30px;
+  /* width: fit-content; */
+  position: relative;
+  z-index: 1;
+  transition: 0.5s;
+}
+.main-title::before,
+.main-title::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: var(--main-color);
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-title::before {
+  left: -30px;
+}
+.main-title::after {
+  right: -30px;
+}
+.cardPage:hover > .main-title::before {
+  z-index: -1;
+  animation: left-move 0.5s linear forwards;
+}
+.cardPage:hover > .main-title::after {
+  z-index: -1;
+  animation: right-move 0.5s linear forwards;
+}
+.cardPage:hover > .main-title {
+  color: #fff;
+  transition-delay: 0.5s;
+}
+@keyframes left-move {
+    50% {
+      left: 0;
+      width: 12px;
+      height: 12px;
+    }
+    100% {
+      left: 0;
+      border-radius: 0;
+      width: 50%;
+      height: 100%;
+    }
+  }
+  @keyframes right-move {
+    50% {
+      right: 0;
+      width: 12px;
+      height: 12px;
+    }
+    100% {
+      right: 0;
+      border-radius: 0;
+      width: 50%;
+      height: 100%;
+    }
+  }
+/* start landing*/
+.landing {
+  margin-top: 60px;
+}
+.landing-img {
+  /* animation: animate 3s infinite !important; */
+}
+@keyframes animate {
+  0% {
+    padding-top: 0px;
+  }
+  50% {
+    padding-top: 25px;
+  }
+  100% {
+    padding-top: 0px;
+  }
+}
+/* end landing*/
+
+/* start front */
+.front .container {
+  border-top: 2px solid var(--ColorOne);
+}
+.cardPage {
+  background-color: var(--black-light-color);
+  color: var(--white-color);
+  flex-grow: 1;
+  border-radius: 10px;
+  border: 2px solid #f538eb6b;
+  transition: 0.5s;
+}
+.front .cardPage:hover {
+  box-shadow: 0px 0px 8px 0px var(--main-color);
+}
+ .cardPage ul {
+  margin-top: 50px;
+}
+
+.cardPage ul li {
+  font-size: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+.cardPage ul li::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+    background-color: var(--main-color);
+    transition: 0.5s;
+}
+.cardPage ul li:hover {
+    color: var(--main-color);
+}
+.cardPage ul li:hover:before {
+    width: 75%;
+}
+/* end front */
+/* start back */
+.back .container {
+    border-top: 2px solid var(--ColorOne);
+}
+.back .cardPage{
+    border: none;
+    min-height: 380px;
+    max-height: 550px;
+}
+.back .image img{
+  animation: animate 3s infinite !important;
+}
+/* start back */
+/* .min-web{
+    border: 1px solid;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    background-color:  var(--ColorThree) ;
+}
+.min-class-col{
+    border: 1px solid var(--ColorOne) ;
+    border-radius: 20px;
+    width: 200px;
+    height: auto;
+    text-align: center;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color:  var(--ColorThree);
+    color: var(--ColorOne);
+}
+.min-class-col:hover{
+    background-color: var(--ColorTWO) ;
+    color:  var(--ColorThree);
+}
+.min-class-rol{
+    justify-content: end;
+    justify-content: space-around;
+}
+.min-class-rol-2{
+    justify-content: end;
+    justify-content: space-around;
+    /* margin: 100px; */
+/* } */
+/* .cardPage{
+color: var(--white-color);
+background-color: var(--black-color);
+border: 2px solid var(--ColorOne);
+transition: all 0.5s;
+}
+.cardPage:hover{
+color: var(--ColorOne);
+background-color: var(--white-color);
+border: 2px solid var(--black-color);
+transform: scale(1.05);
+}
+.cardPage:active {
+transform: scale(0.95) rotateZ(1.7deg);
+} */
