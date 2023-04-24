@@ -6,6 +6,7 @@
   --black-color:#000;
   --white-color:#fff;
   --black-light-color:#242424;
+  --textWhite50:#a6a3a3d4;
 }
 html{
   user-select: none;
@@ -55,6 +56,7 @@ a{
 }
 .custom-header .title {
   font-family: 'Alkatra', cursive;
+  color: var(--white-color);
 }
 .custom-header .title h1{
   font-size: 60px;
@@ -73,6 +75,9 @@ a{
 }
 .custom-header p{
   width: 75%;
+}
+.textWhite50 {
+  color: var(--textWhite50) ;
 }
 /* start navbar */
 .navbar{
