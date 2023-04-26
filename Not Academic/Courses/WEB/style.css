@@ -97,9 +97,6 @@ body {
 .landing {
   margin-top: 60px;
 }
-.landing-img {
-  /* animation: animate 3s infinite !important; */
-}
 @keyframes animate {
   0% {
     padding-top: 0px;
@@ -171,50 +168,11 @@ body {
 .back .image img{
   animation: animate 3s infinite !important;
 }
-/* start back */
-/* .min-web{
-    border: 1px solid;
-    width: auto;
-    height: auto;
-    border-radius: 20px;
-    background-color:  var(--ColorThree) ;
-}
-.min-class-col{
-    border: 1px solid var(--ColorOne) ;
-    border-radius: 20px;
-    width: 200px;
-    height: auto;
-    text-align: center;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color:  var(--ColorThree);
-    color: var(--ColorOne);
-}
-.min-class-col:hover{
-    background-color: var(--ColorTWO) ;
-    color:  var(--ColorThree);
-}
-.min-class-rol{
-    justify-content: end;
-    justify-content: space-around;
-}
-.min-class-rol-2{
-    justify-content: end;
-    justify-content: space-around;
-    /* margin: 100px; */
-/* } */
-/* .cardPage{
-color: var(--white-color);
-background-color: var(--black-color);
-border: 2px solid var(--ColorOne);
-transition: all 0.5s;
-}
-.cardPage:hover{
-color: var(--ColorOne);
-background-color: var(--white-color);
-border: 2px solid var(--black-color);
-transform: scale(1.05);
-}
-.cardPage:active {
-transform: scale(0.95) rotateZ(1.7deg);
-} */
+/* end back */
+
+
+
+
+/* start HTML */
+
+/* end HTML */
