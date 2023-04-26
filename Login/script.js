@@ -28,3 +28,4 @@ inputs.forEach(e => {
     else label.style.cssText = "transform: translate(0, 0);";
   }
 )});
+
