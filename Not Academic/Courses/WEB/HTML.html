@@ -14,123 +14,180 @@
     <link rel="stylesheet" href="../../Bootstarp/css/all.min.css">
     <link rel="stylesheet" href="../../Bootstarp/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../CSS/learning-shop.css">
-    <style>
-    :root{
-    --ColorOne:#f538eb;
-    --ColorTWO:#6C3483;
-    --ColorThree:#f4f6f75d;
-    --black-color:#000;
-    --white-color:#fff;
-    }
-    body{
-        background-color: var(--black-color);
-    }
-        .min-web{
-            border: 1px solid;
-            width: auto;
-            height: auto;
-            border-radius: 10px;
-            background-color:  var(--ColorThree) ;
-        }
-        .min-class-col{
-            border: 1px solid var(--ColorOne) ;
-            border-radius: 20px;
-            width: 200px;
-            height: auto;
-            text-align: center;
-            font-size: 20px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            background-color:  var(--ColorThree);
-            color: var(--ColorOne);
-        }
-        .min-class-col:hover{
-            background-color: var(--ColorTWO) ;
-            color:  var(--ColorThree);
-        }
-        .min-class-rol{
-            justify-content: end;
-            justify-content: space-around;
-        }
-        .min-class-rol-2{
-            justify-content: end;
-            justify-content: space-around;
-            /* margin: 100px; */
-        }
-        .cardPage{
-        color: var(--white-color);
-        background-color: var(--black-color);
-        border: 2px solid var(--ColorOne);
-        transition: all 0.5s;
-        }
-        .cardPage:hover{
-        color: var(--ColorOne);
-        background-color: var(--white-color);
-        border: 2px solid var(--black-color);
-        transform: scale(1.05);
-        }
-        .cardPage:active {
-        transform: scale(0.95) rotateZ(1.7deg);
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <!-- Start navbar -->
-    <nav class="navbar navbar-expand-lg pt-3 pb-3">
-        <div class="container">
-            <div class="logo me-3">
-            <a class="navbar-brand" href="#">
-                <img src="" alt="logo">
-            </a>
-            </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars" style="color: var(--main-color);"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
-            <li class="nav-item"><a href="#">Home</a></li>
-            <li class="nav-item"><a href="#" class="active">Not Academic</a></li>
-            <li class="nav-item"><a href="#Programming">Programming</a></li>
-            <li class="nav-item"><a href="#">Problem Solving</a></li>
-            <li class="nav-item"><a href="#">Self Study</a></li>
+  <!-- Start navbar -->
+  <nav class="navbar navbar-expand-lg pt-3 pb-3">
+      <div class="container">
+          <div class="logo me-3">
+          <a class="navbar-brand" href="#">
+              <img src="" alt="logo">
+          </a>
+          </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars" style="color: var(--main-color);"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#">Professional</a></li>
+          <li class="nav-item"><a href="#" class="active inpage">HTML</a></li>
+          <li class="nav-item"><a href="#" class="inpage">Lessons</a></li>
+          <li class="nav-item"><a href="#" class="inpage">Projects</a></li>
+          </ul>
+          <div class="user d-flex gap-2 align-items-center ms-lg-4 justify-content-end">
+          <div class="lightMode rounded-pill ps-1 pe-1 d-flex align-items-center position-relative me-lg-3 me-auto">
+              <span class="icon_container d-flex align-items-center justify-content-center rounded-pill position-absolute moon_mode">
+              <i class="icon-dark fa-solid fa-moon" data-dark="true"></i>
+              </span>
+          </div>
+          <div class="picture-account">
+              <img src="../image/photo1.jpg" alt="user image" class="img-fluid rounded-pill">
+          </div>
+          <div class="username" style="color:var(--main-color);">Mohamed</div>
+          <div class="logout position-relative ms-1">Log out</div>
+          </div>
+      </div>
+      </div>
+  </nav>
+  <!-- End navbar -->
+  <div class="container landing position-relative overflow-hidden" style="height: calc(100vh - 292px);">
+    <div class="row justify-content-around gap-5 position-absolute box1 open">
+      <div class="header col-sm-12 col-md-6 col-lg-6 text-center text-md-start order-2 order-md-0">
+        <h2 class="title">HTML <span class="ms-3 d-block fs-2" style="color: var(--main-color);">Hyper Text Markup Language</span></h2>
+        <p class="ps-1 lh-lg">It is a markup language that defines the structure of web pages. HTML consists of elements, also called tags, that wrap different parts of the content to make it appear or act a certain way. HTML can be assisted by technologies like CSS and JavaScript to enhance the appearance and functionality of web pages. HTML allows users to click links and be redirected to new pages. Web browsers receive HTML documents from a web server or local storage and render them into multimedia web pages.</p>
+      </div>
+      <div class="d-none d-md-flex col-sm-6 col-md-5 col-lg-4 align-items-center landing-img">
+        <img src="../../image/4860133.jpg" alt="" class="img-fluid">
+      </div>
+    </div>
+    <div class="row lessons h-100 w-100 position-absolute box2 gap-2">
+      <div class="contant col-lg-3 overflow-auto h-100">
+        <h2 class="title">Lessons</h2>
+        <ul class="ms-2">
+          <li class="len">
+            <h6>Lesson 1</h6>
+            <ul class="len1">
+              <li>Introduction and What I Need To Learn</li>
+              <li>Elements and Browser</li>
+              <li>First Project And First Page</li>
+              <li>Head And Nested Elements</li>
+              <li>Comments and Use Cases</li>
             </ul>
-            <div class="user d-flex gap-2 align-items-center ms-lg-4 justify-content-end">
-            <div class="lightMode rounded-pill ps-1 pe-1 d-flex align-items-center position-relative me-lg-3 me-auto">
-                <span class="icon_container d-flex align-items-center justify-content-center rounded-pill position-absolute moon_mode">
-                <i class="icon-dark fa-solid fa-moon" data-dark="true"></i>
-                </span>
-            </div>
-            <div class="picture-account">
-                <img src="../image/photo1.jpg" alt="user image" class="img-fluid rounded-pill">
-            </div>
-            <div class="username" style="color:var(--main-color);">Mohamed</div>
-            <div class="logout position-relative ms-1">Log out</div>
-            </div>
-        </div>
-        </div>
-    </nav>
-    <!-- End navbar -->
-    <div class="container min-web " style="margin-top: 50px;" >
-    <div class="row sub-title text-center row-cols-1  row-cols-sm-2 row-cols-md-3 row-cols-lg-4" style="margin-top: 50px;" >
-        <div class="col ">
-            <h2 style="font-size: 40px;">HTML</h2>
-        </div>
+          </li>
+          <li class="len">
+            <h6>Practice 1</h6>
+          </li>
+          <li class="len">
+            <h6>Lesson 2</h6>
+            <ul class="len2">
+              <li>Doctype And Standard And Quirks Mode</li>
+              <li>Headings And Use Cases</li>
+              <li>Syntax And Tests</li>
+              <li>Paragraph Element</li>
+              <li>Elements Attributes</li>
+            </ul>
+          </li>
+          <li  class="len">
+            <h6>Practice 2</h6>
+          </li>
+          <li class="len">
+            <h6>Lesson 3</h6>
+            <ul class="len3">
+              <li>Formatting Elements</li>
+              <li>Links – Anchor Tag</li>
+              <li>Image And Deal With Path</li>
+              <li>Lists – UL, OL, DL</li>
+              <li>Table</li>
+            </ul>
+          </li>
+          <li class="len">
+            <h6>Practice 3</h6>
+          </li>
+          <li class="len">
+            <h6>Lesson 4</h6>
+            <ul class="len4">
+              <li>Span And Break And Horizontal Rule</li>
+              <li>Div and How To Use</li>
+              <li>HTML Entities</li>
+              <li>Semantic Elements</li>
+              <li>Layout With Div And Classes</li>
+            </ul>
+          </li>
+          <li class="len">
+            <h6>Practice 4</h6>
+          </li>
+          <li class="len">
+            <h6>Lesson 5</h6>
+            <ul class="len5">
+              <li>Layout With Semantic Elements</li>
+              <li>Audio</li>
+              <li>Video</li>
+              <li>Form Part 1 – Input Types And Label</li>
+              <li>Form Part 2 – Required, Placeholder, Value</li>
+            </ul>
+          </li>
+          <li class="len">
+            <h6>Practice 5</h6>
+          </li>
+          <li class="len">
+            <h6>Lesson 6</h6>
+            <ul class="len6">
+              <li>Form Part 3 – Action, Name, Method</li>
+              <li>Form Part 4 – Hidden, Reset, Color, Range, Number</li>
+              <li>Form Part 5 – ReadOnly, Disabled, Autofocus</li>
+              <li>Form Part 6 – Radio And Checkbox</li>
+              <li>Form Part 7 – Select and Textarea</li>
+            </ul>
+          </li>
+          <li class="len">
+            <h6>Practice 6</h6>
+          </li>
+          <li class="len">
+            <h6>Lesson 7</h6>
+            <ul class="len7">
+              <li>Form Part 8 – File, Search, URL, Time</li>
+              <li>Form Part 9 – Data List, Novalidate, Target</li>
+              <li>Blockquote, Wbr, Bdi, Button</li>
+              <li>iFrame, Pre, Code</li>
+              <li>Accessibility Intro</li>
+              <li>ARIA And Screen Readers</li>
+            </ul>
+          </li>
+          <li class="len">
+            <h6>Practice 6</h6>
+          </li>
+        </ul>
+      </div>
+      <div class="screen col-lg-8 rounded-3">
+
+      </div>
     </div>
-    <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3 row-cols-lg-3 m-2" style=" font-size: 30px;justify-content: center;">
-        <div class=" col-lg-3 m-2  card text-center p-5 cardPage" style="margin: 10px 0px;" onclick="window.location='./lession.html'"> Lessons</div>
-        <div class=" col-lg-3 m-2 card text-center p-5 cardPage" style="margin: 10px 0px;" onclick="window.location='./practice.html'">Practices</div>
-        <div class=" col-lg-3 m-2 card text-center p-5 cardPage" style="margin: 10px 0px;"onclick="window.location='./project.html'"> Projects</div>
+    <div class="row projects h-100 ms-0 w-100 position-absolute box3 p-5 rounded-3">
+      <div class="content col-sm-2 col-md-2 col-lg-4">
+        <h2 class="title fs-1">Projects</h2>
+        <ul class="ms-2 list-unstyled mt-5 fs-4">
+          <li class="all m-3 active">ALL</li>
+          <li class="easy m-3">Easy</li>
+          <li class="medium m-3">Medium</li>
+          <li class="hard m-3">Hard</li>
+        </ul>
+      </div>
+      <div class="projs col-sm-8 col-md-8 col-lg-9">
+      </div>
     </div>
-</div>
+  </div>
   <!-- Start footer -->
-  <footer style="margin-top: 15%;">
-    <div class="container mt-5 pt-3 d-flex flex-column flex-lg-row justify-content-center gap-2 gap-lg-5 text-white-50 align-items-center">
+  <footer>
+    <div class="container mt-5 pt-3 d-flex flex-column flex-lg-row justify-content-center gap-2 gap-lg-5 textWhite50 align-items-center">
       <div class="logo">
         <a href="#"><img src="" alt="Logo"></a>
       </div>
       <ul class="list-unstyled d-flex gap-2">
-        <li><a href="../index.html" class="text-white-50">Programming Course</a></li>
-        <li><a href="../index.html" class="text-white-50">Problem Solving Training</a></li>
-        <li><a href="../index.html" class="text-white-50">Soft Skills Courses</a></li>
+        <li><a href="../index.html" class="textWhite50">Programming Course</a></li>
+        <li><a href="../index.html" class="textWhite50">Problem Solving Training</a></li>
+        <li><a href="../index.html" class="textWhite50">Soft Skills Courses</a></li>
       </ul>
       <div class="team">
         <a href="#">Our Team</a>
@@ -147,12 +204,13 @@
         </a>
       </div>
     </div>
-    <p class="text-white-50 text-center">&copy; 2023 <span>Leon</span> All Right Reserved</p>
+    <p class="textWhite50 text-center">&copy; 2023 <span>Leon</span> All Right Reserved</p>
   </footer>
   <!-- end footer -->
     <!-- end programming course-->
     <script src="../../Bootstarp/js/all.min.js"></script>
     <script src="../../Bootstarp/js/bootstrap.bundle.min.js"></script>
     <script src="../../JS/main.js"></script>
+    <script src="./main.js"></script>
     </body>
 </html>
