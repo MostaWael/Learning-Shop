@@ -11,10 +11,10 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
             rel="stylesheet">
         <!-- CSS Files -->
-        <link rel="stylesheet" href="./main page/CSS/style.css">
-        <link rel="stylesheet" href="./Not Academic/CSS/learning-shop.css">
-        <link rel="stylesheet" href="./Bootstarp&icons/css/all.min.css">
-        <link rel="stylesheet" href="./Bootstarp&icons/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../main page/CSS/style.css">
+        <link rel="stylesheet" href="../Not Academic/CSS/learning-shop.css">
+        <link rel="stylesheet" href="../Bootstarp&icons/css/all.min.css">
+        <link rel="stylesheet" href="../Bootstarp&icons/css/bootstrap.min.css">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg pt-3 pb-3">
@@ -52,12 +52,50 @@
                                     data-dark="true"></i>
                             </span>
                         </div>
-                        <!-- <div class="picture-account">
-                            <img src="./Not Academic/image/photo1.jpg" alt="user
-                                image" class="img-fluid rounded-pill">
-                        </div> -->
-                        <div class="username" style="color:var(--main-color);" ><a href="./Login/index.html">Enter</a></div>
-                        <div class="logout position-relative ms-1"><a href="./Login/index.html">Register</a></div>
+                        <div class="username" style="color:var(--main-color);" id="USER"></div>
+                        <div class="logout position-relative ms-1" id="logOut">Log out</div>
+                        <script type="module">
+                            // Import the functions you need from the SDKs you need
+                        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
+                        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-analytics.js";
+                        import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
+                        const firebaseConfig = {
+                            apiKey: "AIzaSyBGP9geSGxATeveOyjw4H02w0WzMvuZGO0",
+                            authDomain: "learning-shop-f1ce4.firebaseapp.com",
+                            projectId: "learning-shop-f1ce4",
+                            storageBucket: "learning-shop-f1ce4.appspot.com",
+                            messagingSenderId: "116015031423",
+                            appId: "1:116015031423:web:444070cce6719c6c464b4a",
+                            measurementId: "G-HXFVLTYDEJ"
+                        };
+                      // Initialize Firebase
+                        const app = initializeApp(firebaseConfig);
+                        const analytics = getAnalytics(app);
+                        const auth = getAuth();
+                        import{getDatabase,set,get,ref ,onValue } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js"
+                        const db = getDatabase();
+                        function read_db() {
+                                var connect_db = ref(db, 'user/' + `${localStorage.getItem("val")}/`);
+                                var retrieve_data='';
+                                onValue(connect_db, (snapshot) => {
+                                    retrieve_data = snapshot.val();
+                                    document.getElementById("USER").innerHTML = retrieve_data.UserName ;
+                                    })
+                            }
+                            read_db()
+
+                        // log out
+                        document.getElementById("logOut").addEventListener("click",function () {
+                            signOut(auth).then(() => {
+                              // Sign-out successful.
+                                location.replace("index.html")
+                            }).catch((error) => {
+                              // An error happened.
+                                alert("Errro.............");
+                            });
+                        })
+                            
+                        </script>
                     </div>
                 </div>
             </div>
@@ -83,7 +121,7 @@
                     </div>
                     <div class="descriptioPhoto col-sm-12 col-md-6 col-lg-4
                         d-none d-md-block d-lg-block">
-                        <img src="./main page/image/mainn.png" alt=""
+                        <img src="../main page/image/mainn.png" alt=""
                             class="img-fluid">
                     </div>
                 </div>
@@ -102,9 +140,9 @@
                     gap-md-0 gap-lg-0">
                     <div class="col-sm-12 col-md-5 col-lg-5 p-4">
                         <div class="content text-center "
-                            >
+                            onclick="window.location='/Academic/index.html'">
                             <div class="image">
-                                <img src="./main page/image/3974104-removebg-preview.png"
+                                <img src="../main page/image/3974104-removebg-preview.png"
                                     alt="" class="img-fluid w-75"
                                     style="margin-top:-45px;">
                             </div>
@@ -130,9 +168,9 @@
                     </div>
                     <div class="col-sm-12 col-md-5 col-lg-5">
                         <div class="content text-center"
-                            >
+                            onclick="window.location='/Not Academic/index.html'">
                             <div class="image">
-                                <img src="./main page/image/20944358-removebg-preview.png"
+                                <img src="../main page/image/20944358-removebg-preview.png"
                                     alt="" class="img-fluid">
                             </div>
                             <div class="content text-center">
@@ -270,9 +308,10 @@
                 All Right Reserved</p>
         </footer>
         <!-- end footer -->
-        <script src="./main page/JS/js.js"></script>
-        <script src="./Not Academic/JS/main.js"></script>
-        <script src="./Bootstarp&icons/js/all.min.js"></script>
-        <script src="./Bootstarp&icons/js/bootstrap.bundle.min.js"></script>
+        <script src="../main page/JS/js.js"></script>
+        <script src="../Not Academic/JS/main.js"></script>
+        <script src="../Bootstarp&icons/js/all.min.js"></script>
+        <script src="../Bootstarp&icons/js/bootstrap.bundle.min.js"></script>
+
     </body>
 </html>

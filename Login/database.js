@@ -21,7 +21,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth();
-import{getDatabase,set,get,ref ,onValue } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js"
+import{getDatabase,set,ref  } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js"
 const db = getDatabase();
 
 
@@ -56,14 +56,13 @@ document.getElementById("SignIn").addEventListener("click",function () {
     var userName2=document.getElementById("userName2").value;
     var password=document.getElementById("password2").value;
     localStorage.setItem("val",password);
-    console.log(localStorage.getItem("val"));
-
+    // alert(localStorage.getItem("val"));
     signInWithEmailAndPassword(auth, userName2, password)
     .then((userCredential) => {
    // Signed in 
     const user = userCredential.user;
     console.log(user);
-    location.replace("../index.html")
+    location.replace("./landing.html")
 })
 .catch((error) => {
 const errorCode = error.code;
