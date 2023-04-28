@@ -36,9 +36,9 @@
                     id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
                         <li class="nav-item"><a href="#" class="active">Home</a></li>
-                        <li class="nav-item"><a href="#">Content</a></li>
-                        <li class="nav-item"><a href="#">Features</a></li>
-                        <li class="nav-item"><a href="#">Contact us</a></li>
+                        <li class="nav-item"><a href="#content">Content</a></li>
+                        <li class="nav-item"><a href="#feat">Features</a></li>
+                        <li class="nav-item"><a href="#contact">Contact us</a></li>
                     </ul>
                     <div class="user d-flex gap-2 align-items-center ms-lg-4
                         justify-content-end">
@@ -90,7 +90,7 @@
             </div>
         </div>
         <!-- content -->
-        <main>
+        <main id="content">
             <div class="container pt-5">
                 <div class="custom-header d-flex align-items-center flex-column
                     text-center">
@@ -100,7 +100,7 @@
                 </div>
                 <div class="row category justify-content-around mt-4 gap-5
                     gap-md-0 gap-lg-0">
-                    <div class="col-sm-12 col-md-5 col-lg-5 p-4">
+                    <div class="col-sm-12 col-md-5 col-lg-5 p-4" onclick="window.location='./Academic/index.html'">
                         <div class="content text-center "
                             >
                             <div class="image">
@@ -109,7 +109,7 @@
                                     style="margin-top:-45px;">
                             </div>
                             <div class="custom-header d-flex align-items-center
-                                flex-column text-center ">
+                                flex-column text-center">
                                 <div class="title">
                                     <h1 class="f fs-1">Academic Courses</h1>
                                 </div>
@@ -128,7 +128,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-5 col-lg-5">
+                    <div class="col-sm-12 col-md-5 col-lg-5" onclick="window.location='./Not Academic/index.html'">
                         <div class="content text-center"
                             >
                             <div class="image">
@@ -163,7 +163,7 @@
             </div>
         </main>
         <!-- features -->
-        <div class="features mt-5">
+        <div id="feat" class="features mt-5">
             <div class="container pt-5">
                 <div class="custom-header d-flex align-items-center flex-column
                     text-center">
@@ -216,7 +216,7 @@
             </div>
         </div>
         <!-- start contact -->
-        <div class="contact mt-5">
+        <div id="contact" class="contact mt-5">
             <div class="container pt-5">
                 <div class="custom-header d-flex align-items-center flex-column
                     text-center">
