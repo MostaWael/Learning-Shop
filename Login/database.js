@@ -62,7 +62,7 @@ document.getElementById("SignIn").addEventListener("click",function () {
    // Signed in 
     const user = userCredential.user;
     console.log(user);
-    location.replace("./landing.html")
+    location.replace("./lan.html")
 })
 .catch((error) => {
 const errorCode = error.code;
