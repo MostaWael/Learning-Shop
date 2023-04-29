@@ -1,0 +1,73 @@
+.sidebar {
+  background-color: rgb(190, 205, 209);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  padding: 20px;
+  transition: all 0.5s ease;
+}
+
+body {
+  background-color: white;
+}
+
+.profile {
+  margin-bottom: 30 px;
+  text-align: center;
+}
+
+.bigphoto {
+  display: block;
+  width: 100px;
+  height: 107px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+li {
+  display: block;
+  padding: 13px 30px;
+  border-bottom: 1px solid white;
+  color: aliceblue;
+  font-size: 16px;
+  position: relative;
+}
+
+ul li:hover,
+ul li:active {
+  color: red;
+  background-color: rgb(47, 24, 69);
+  border-right: 2px solid rgb(255, 255, 25);
+}
+
+.photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.section {
+  width: calc(100% - 250px);
+  margin-left: 280px;
+  transition: all 0.5 ease;
+}
+
+.navbar {
+  background-color: blue;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0, 30px;
+}
+
+body.active .parent .sidebar {
+  left: -300px;
+}
+
+body.active .parent .section {
+  margin-left: 0;
+  width: 100%;
+}
