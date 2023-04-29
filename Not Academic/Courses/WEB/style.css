@@ -170,9 +170,109 @@ body {
 }
 /* end back */
 
-
-
-
 /* start HTML */
+.landing > div{
+  transition: 1s;
+}
+.box1{
+  left: 0%;
+}
+.box2{
+  left: -100%;
+}
+.box3{
+  left: -200%;
+}
+.lessons .contant::-webkit-scrollbar{
+  width: 10px;
+}
+.lessons .contant::-webkit-scrollbar-track{
+  background-color: var(--main-color);
+  border-radius: 20px;
+}
+.lessons .contant::-webkit-scrollbar-thumb{
+  background-color: var(--black-color);
+  border-radius: 20px;
+  border: 3px solid var(--main-color);
+}
+.lessons ul{
+  list-style-type: none;
+}
+.lessons ul li{
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--textWhite50);
+}
+.lessons ul .len h6{
+  position: relative;
+}
+.lessons .len ul{
+  margin-left: -20px;
+}
+.lessons .len ul li{
+  margin-bottom: 8px;
+}
+.lessons ul .len h6:before{
+  content: '';
+  position: absolute;
+  left: -25px;
+  border-width:8px;
+  border-style: solid;
+  border-left-color: var(--textWhite50);
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  cursor: pointer;
+}
+.lessons ul li ul{
+  height: 0;
+  overflow: hidden;
+}
+.lessons ul li ul li{
+  background-color: var(--black-light-color);
+  padding: 7px 15px;
+  border-radius: 8px;
+}
+
+.lessons ul li ul.show{
+  height: 100%;
+}
+.screen{
+  flex-grow: 1;
+  border: 2px solid var(--textWhite50);
+}
+.projects{
+  background-color: var(--black-light-color);
+  border: 2px solid #f538eb6b;
+}
+.projects .title{
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--main-color);
+  font-family: "Alkatra", cursive;
+}
+.projects .content{
+  width: fit-content;
+  padding-right: 50px;
+  border-radius: 5px;
+  border-right: 5px solid #f538eb6b;
+}
+.projects .content ul li{
+  font-family: "Alkatra", cursive;
+  width: 100%;
+  padding: 0px 10px;
+  border-radius: 5px;
+  margin-left: 0px !important;
+  cursor: pointer;
+  text-align: center;
+  color: var(--white-color);
+  transition: 0.5s;
+}
+.projects .content ul li:hover{
+  background-color: var(--textWhite50);
+  color: var(--black-color);
+}
+.projects .content ul li.active{
+  background-color: var(--textWhite50);
+  color: var(--black-color);
+}
 
 /* end HTML */

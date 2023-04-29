@@ -33,6 +33,44 @@ document.querySelector(".icon_container").onclick = function darkMode() {
   }, 500)
 }
 
-  setTimeout(() => {
-    icon.classList.remove("animated");
-  }, 500);
+setTimeout(() => {
+  icon.classList.remove("animated");
+}, 500);
+
+
+// let nav = document.querySelectorAll(".navbar-nav > li > a");
+// nav.forEach(ele => {
+//   ele.addEventListener('click', e => {
+//     nav.forEach(x => {
+//       x.classList.remove("active");
+//     });
+//     e.target.classList.add("active");
+//   });
+// });
+let nav = document.querySelectorAll(".navbar-nav > li > a");
+let landing = document.querySelectorAll(".landing > div");
+nav.forEach(ele => {
+  ele.addEventListener('click', e => {
+    nav.forEach(x => {
+      x.classList.remove("active");
+    });
+    e.target.classList.add("active");
+    if (e.target.classList.contains("inpage")) {
+      if (e.target.textContent.includes("HTML")) {
+        landing[0].style.cssText = "left : 0%;";
+        landing[1].style.cssText = "left : -100%;";
+        landing[2].style.cssText = "left : -200%;";
+      }
+      else if (e.target.textContent.includes("Lessons")) {
+        landing[0].style.cssText = "left : 100%;";
+        landing[1].style.cssText = "left : 0%;";
+        landing[2].style.cssText = "left : -100%;";
+      }
+      else {
+        landing[0].style.cssText = "left : 200%;";
+        landing[1].style.cssText = "left : 100%;";
+        landing[2].style.cssText = "left : 0%;";
+      }
+    }
+  });
+});
