@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+  <div class="parent">
+    <div class="sidebar">
+      <div class="profile">
+        <img class="bigphoto" src="Karim_Benzema_wearing_Real_Madrid_home_kit_2021-2022.jpg" alt="">
+        <h3 style="color: aliceblue;">Z0ZZ</h3>
+        <p style="color: aliceblue;">Student at svu</p>
+      </div>
+      <ul>
+        <li><a href="#"><span class="item"
+              style="color: black; font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Dashboard</span></a>
+        </li>
+        <li><a href="#"><span class="item"
+              style="color: black; font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">performance</span></a>
+        </li>
+        <li><a href="#"><span class="item"
+              style="color: black; font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Development</span></a>
+        </li>
+        <li><a href="#"><span class="item"
+              style="color: black; font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Reports</span></a>
+        </li>
+        <li><a href="#"><span class="item"
+              style="color: black; font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">settings</span></a>
+        </li>
+      </ul>
+    </div>
+    <!-- mainpage -->
+    <!-- small photo -->
+    <div class="section">
+      <div class="navbar">
+        <img class="photo" src="Karim_Benzema_wearing_Real_Madrid_home_kit_2021-2022.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var photo = document.querySelector(".photo");
+    photo.addEventListener("click", function () {
+      document.querySelector("body").classList.toggle("active");
+    }
+    )
+  </script>
+</body>
+
+</html>
