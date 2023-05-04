@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur:ital@1&display=swap" rel="stylesheet">
     <!-- CSS Files -->
     <link rel="stylesheet" href="../../CSS/all.min.css">
     <link rel="stylesheet" href="../../Bootstarp/css/all.min.css">
@@ -22,9 +25,9 @@
   <nav class="navbar navbar-expand-lg pt-3 pb-3">
       <div class="container">
           <div class="logo me-3">
-          <a class="navbar-brand" href="#">
-              <img src="" alt="logo">
-          </a>
+            <a class="navbar-brand fs-3" href="#" style="font-family: 'Fruktur', cursive;color: var(--white-color);">
+              <span style="color: var(--main-color);">L</span>Shop
+            </a>
           </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars" style="color: var(--main-color);"></i>
@@ -55,7 +58,7 @@
   </nav>
   <!-- End navbar -->
   <div class="container landing position-relative overflow-hidden" style="height: calc(100vh - 292px);">
-    <div class="row justify-content-around gap-5 position-absolute box1 open">
+    <div id="box1" class="row justify-content-around gap-5 position-absolute box1 open">
       <div class="header col-sm-12 col-md-6 col-lg-6 text-center text-md-start order-2 order-md-0">
         <h2 class="title">HTML <span class="ms-3 d-block fs-2" style="color: var(--main-color);">Hyper Text Markup Language</span></h2>
         <p class="ps-1 lh-lg">It is a markup language that defines the structure of web pages. HTML consists of elements, also called tags, that wrap different parts of the content to make it appear or act a certain way. HTML can be assisted by technologies like CSS and JavaScript to enhance the appearance and functionality of web pages. HTML allows users to click links and be redirected to new pages. Web browsers receive HTML documents from a web server or local storage and render them into multimedia web pages.</p>
@@ -64,7 +67,7 @@
         <img src="../../image/4860133.jpg" alt="" class="img-fluid">
       </div>
     </div>
-    <div class="row lessons h-100 w-100 position-absolute box2 gap-2">
+    <div id="box2" class="row lessons h-100 w-100 position-absolute box2 gap-2">
       <div class="contant col-lg-3 overflow-auto h-100">
         <h2 class="title">Lessons</h2>
         <ul class="ms-2">
@@ -166,7 +169,7 @@
 
       </div>
     </div>
-    <div class="row projects h-100 ms-0 w-100 position-absolute box3 p-4 p-lg-5 rounded-3">
+    <div id="box3" class="row projects h-100 ms-0 w-100 position-absolute box3 p-4 p-lg-5 rounded-3">
       <div class="content col-sm-2 col-md-2 col-lg-4">
         <h2 class="title fs-1">Projects</h2>
         <ul class="ms-2 list-unstyled mt-5 fs-4 d-flex d-lg-block">
@@ -184,13 +187,10 @@
   <footer>
     <div class="container mt-5 pt-3 d-flex flex-column flex-lg-row justify-content-center gap-2 gap-lg-5 textWhite50 align-items-center">
       <div class="logo">
-        <a href="#"><img src="" alt="Logo"></a>
+        <a class="navbar-brand fs-6" href="#" style="font-family: 'Fruktur', cursive;">
+          <span style="color: var(--main-color);">L</span>Shop
+        </a>
       </div>
-      <ul class="list-unstyled d-flex gap-2">
-        <li><a href="../index.html" class="textWhite50">Programming Course</a></li>
-        <li><a href="../index.html" class="textWhite50">Problem Solving Training</a></li>
-        <li><a href="../index.html" class="textWhite50">Soft Skills Courses</a></li>
-      </ul>
       <div class="team">
         <a href="#">Our Team</a>
       </div>
