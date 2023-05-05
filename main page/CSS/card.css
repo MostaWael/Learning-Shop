@@ -68,12 +68,12 @@
     background-size: 110%;
   }
   .card4:hover:after {
-    background-image: url();
-    background-size: 110%;
+    background-image: url(/photo/medd.jpg);
+    background-size: 135%;
   }
   .card5:hover:after {
-    background-image: url();
-    background-size: 110%;
+    background-image: url(/photo/IMG-20230505-WA0014\ \(1\).jpg);
+    background-size: 100%;
   }
   .card6:hover:after {
     background-image: url();
