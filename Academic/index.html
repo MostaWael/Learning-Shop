@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-lg pt-3 pb-3">
       <div class="container">
         <div class="logo me-3">
-          <a class="navbar-brand fs-3" href="#" style="font-family: 'Fruktur', cursive;color: var(--white-color);">
+          <a class="navbar-brand fs-3" href="../Login/landing.html" style="font-family: 'Fruktur', cursive;color: var(--white-color);">
             <span style="color: var(--main-color);">L</span>Shop
           </a>
         </div>
@@ -54,11 +54,49 @@
                 <i class="icon-dark fa-solid fa-moon" data-dark="true"></i>
               </span>
             </div>
-            <div class="picture-account">
-              <img src="../Not Academic/image/photo1.jpg" alt="user image" class="img-fluid rounded-pill"/>
-            </div>
-            <div class="username" style="color: var(--main-color)">Mohamed</div>
-            <div class="logout position-relative ms-1">Log out</div>
+            <div class="username" style="color:var(--main-color);" id="USER"></div>
+            <div class="logout position-relative ms-1" id="logOut">Log out</div>
+            <script type="module">
+                // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-analytics.js";
+            import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
+            const firebaseConfig = {
+                apiKey: "AIzaSyBGP9geSGxATeveOyjw4H02w0WzMvuZGO0",
+                authDomain: "learning-shop-f1ce4.firebaseapp.com",
+                projectId: "learning-shop-f1ce4",
+                storageBucket: "learning-shop-f1ce4.appspot.com",
+                messagingSenderId: "116015031423",
+                appId: "1:116015031423:web:444070cce6719c6c464b4a",
+                measurementId: "G-HXFVLTYDEJ"
+            };
+          // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+            const auth = getAuth();
+            import{getDatabase,set,get,ref ,onValue } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js"
+            const db = getDatabase();
+            function read_db() {
+                    var connect_db = ref(db, 'user/' + `${localStorage.getItem("val")}/`);
+                    var retrieve_data='';
+                    onValue(connect_db, (snapshot) => {
+                        retrieve_data = snapshot.val();
+                        document.getElementById("USER").innerHTML = retrieve_data.UserName ;
+                        })
+                }
+                read_db()
+
+            // log out
+            document.getElementById("logOut").addEventListener("click",function () {
+                signOut(auth).then(() => {
+                  // Sign-out successful.
+                    location.replace("../Login/index.html")
+                }).catch((error) => {
+                  // An error happened.
+                    alert("Errro.............");
+                });
+            })
+            </script>
           </div>
         </div>
       </div>
@@ -222,17 +260,16 @@
   <!-- Start footer -->
   <footer>
     <div class="container mt-5 pt-3 d-flex flex-column flex-lg-row justify-content-center gap-2 gap-lg-5 textWhite50 align-items-center">
-      <div class="logo">
-        <a href="#"><img src="" alt="Logo"></a>
+      <div class="logo me-3">
+        <a class="navbar-brand fs-3" href="../Login/landing.html" style="font-family: 'Fruktur', cursive;color: var(--white-color);">
+          <span style="color: var(--main-color);">L</span>Shop
+        </a>
       </div>
       <ul class="list-unstyled d-flex gap-2">
-        <li><a href="#" class="textWhite50">Programming Course</a></li>
-        <li><a href="#" class="textWhite50">Problem Solving Training</a></li>
-        <li><a href="#" class="textWhite50">Soft Skills Courses</a></li>
+        <li><a href="#" class="textWhite50">Academic Course</a></li>
+        <li><a href="#" class="textWhite50">Computer Science</a></li>
+        <li><a href="#" class="textWhite50">Information Technology</a></li>
       </ul>
-      <div class="team">
-        <a href="#">Our Team</a>
-      </div>
       <div class="social-container m-2">
         <a href="https://www.facebook.com/FreeWebsiteCode/" class="social">
           <i class="fa-brands fa-facebook-f"></i>

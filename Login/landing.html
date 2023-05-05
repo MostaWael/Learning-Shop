@@ -10,18 +10,23 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
             rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fruktur:ital@1&display=swap" rel="stylesheet">
         <!-- CSS Files -->
         <link rel="stylesheet" href="../main page/CSS/style.css">
         <link rel="stylesheet" href="../Not Academic/CSS/learning-shop.css">
         <link rel="stylesheet" href="../Bootstarp&icons/css/all.min.css">
         <link rel="stylesheet" href="../Bootstarp&icons/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../main page/CSS/card.css">
+        <title>Learning shop</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg pt-3 pb-3">
             <div class="container">
                 <div class="logo me-3">
-                    <a class="navbar-brand" href="#">
-                        <img src="" alt="logo">
+                    <a class="navbar-brand fs-3" href="#" style="font-family: 'Fruktur', cursive;">
+                        <span style="color: var(--main-color);">L</span>Shop
                     </a>
                 </div>
                 <button class="navbar-toggler" type="button"
@@ -35,10 +40,11 @@
                 <div class="collapse navbar-collapse"
                     id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
-                        <li class="nav-item"><a href="#" class="active">Home</a></li>
-                        <li class="nav-item"><a href="#">Content</a></li>
-                        <li class="nav-item"><a href="#">Features</a></li>
-                        <li class="nav-item"><a href="#">Contact us</a></li>
+                        <li class="nav-item"><a href="#Home" class="active">Home</a></li>
+                        <li class="nav-item"><a href="#Cont">Content</a></li>
+                        <li class="nav-item"><a href="#Feat">Features</a></li>
+                        <li class="nav-item"><a href="#Our">Our Team</a></li>
+                        <li class="nav-item"><a href="#Contact">Contact us</a></li>
                     </ul>
                     <div class="user d-flex gap-2 align-items-center ms-lg-4
                         justify-content-end">
@@ -94,14 +100,13 @@
                                 alert("Errro.............");
                             });
                         })
-                            
                         </script>
                     </div>
                 </div>
             </div>
         </nav>
         <!-- landing -->
-        <div class="landing">
+        <div class="landing" id="Home">
             <div class="container h-100">
                 <div class="row h-100 justify-content-between
                     align-items-center">
@@ -128,7 +133,7 @@
             </div>
         </div>
         <!-- content -->
-        <main>
+        <main id="content" id="Cont">
             <div class="container pt-5">
                 <div class="custom-header d-flex align-items-center flex-column
                     text-center">
@@ -138,16 +143,16 @@
                 </div>
                 <div class="row category justify-content-around mt-4 gap-5
                     gap-md-0 gap-lg-0">
-                    <div class="col-sm-12 col-md-5 col-lg-5 p-4">
+                    <div class="col-sm-12 col-md-5 col-lg-5 p-4" onclick="window.location='../Academic/index.html'">
                         <div class="content text-center "
-                            onclick="window.location='/Academic/index.html'">
+                            >
                             <div class="image">
                                 <img src="../main page/image/3974104-removebg-preview.png"
                                     alt="" class="img-fluid w-75"
                                     style="margin-top:-45px;">
                             </div>
                             <div class="custom-header d-flex align-items-center
-                                flex-column text-center ">
+                                flex-column text-center">
                                 <div class="title">
                                     <h1 class="f fs-1">Academic Courses</h1>
                                 </div>
@@ -166,9 +171,9 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-5 col-lg-5">
+                    <div class="col-sm-12 col-md-5 col-lg-5" onclick="window.location='../Not Academic/index.html'">
                         <div class="content text-center"
-                            onclick="window.location='/Not Academic/index.html'">
+                            >
                             <div class="image">
                                 <img src="../main page/image/20944358-removebg-preview.png"
                                     alt="" class="img-fluid">
@@ -201,7 +206,7 @@
             </div>
         </main>
         <!-- features -->
-        <div class="features mt-5">
+        <div id="feat" class="features mt-5">
             <div class="container pt-5">
                 <div class="custom-header d-flex align-items-center flex-column
                     text-center">
@@ -253,8 +258,39 @@
                 </div>
             </div>
         </div>
+                <!-- our Team -->
+                <div id="Our" class="features mt-5">
+                    <div class="container pt-5">
+                        <div class="custom-header d-flex align-items-center flex-column
+                            text-center">
+                            <div class="title text-uppercase">
+                                <h1>Our Team</h1>
+                            </div>
+                        </div>
+                        <div class="row gap-5 justify-content-between mt-5">
+                            <div class=" col-sm-12 col-md-5 col-lg-3 textWhite50 p-3">
+                                <div class="card">SABRY</div>
+                            </div>
+                            <div class="col-sm-12 col-md-5 col-lg-3 textWhite50 p-3">
+                                <div class="card card2">Dr.Rabi3</div>
+                            </div>
+                            <div class=" col-sm-12 col-md-5 col-lg-3 textWhite50 p-3 ">
+                                <div class="card card3">Z0ZZ</div>
+                            </div>
+                            <div class="col-sm-12 col-md-5 col-lg-3 textWhite50 p-3">
+                                <div class="card card4">KEMO</div>
+                            </div>
+                            <div class=" col-sm-12 col-md-5 col-lg-3 textWhite50 p-3">
+                                <div class="card card5">Diser</div>
+                            </div>
+                            <div class=" col-sm-12 col-md-5 col-lg-3 textWhite50 p-3 ">
+                                <div class="card card6">Yasser</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         <!-- start contact -->
-        <div class="contact mt-5">
+        <div id="Contact" class="contact mt-5">
             <div class="container pt-5">
                 <div class="custom-header d-flex align-items-center flex-column
                     text-center">
@@ -279,16 +315,16 @@
                 justify-content-center gap-2 gap-lg-5 textWhite50
                 align-items-center">
                 <div class="logo">
-                    <a href="#"><img src="" alt="Logo"></a>
+                    <a class="navbar-brand fs-6" href="#" style="font-family: 'Fruktur', cursive;">
+                        <span style="color: var(--main-color);">L</span>Shop
+                    </a>
                 </div>
                 <ul class="list-unstyled d-flex gap-2">
-                    <li><a href="#" class="textWhite50">Programming Course</a></li>
-                    <li><a href="#" class="textWhite50">Problem Solving Training</a></li>
-                    <li><a href="#" class="textWhite50">Soft Skills Courses</a></li>
+                    <li><a href="#content" class="textWhite50">Content</a></li>
+                    <li><a href="#feat" class="textWhite50">Features</a></li>
+                    <li><a href="#Our" class="textWhite50">Our Team</a></li>
+                    <li><a href="#Contact" class="textWhite50">Contact us</a></li>
                 </ul>
-                <div class="team">
-                    <a href="#">Our Team</a>
-                </div>
                 <div class="social-container m-2">
                     <a href="https://www.facebook.com/FreeWebsiteCode/"
                         class="social">
@@ -307,6 +343,7 @@
             <p class="textWhite50 text-center">&copy; 2023 <span>L-Shop</span>
                 All Right Reserved</p>
         </footer>
+        <span class="up"><i class="fa-solid fa-arrow-up"></i></span>
         <!-- end footer -->
         <script src="../main page/JS/js.js"></script>
         <script src="../Not Academic/JS/main.js"></script>

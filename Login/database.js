@@ -34,20 +34,25 @@ document.getElementById("register").addEventListener("click",function () {
 .then((userCredential) => {
 // Signed in 
 const user = userCredential.user;
-console.log(user);
-alert("successful.....")
+alert("Account has been successfully registered")
 set(ref(db, "user/"+ password),{
     UserName: uesrName,
     Email: email,
     PassWord: password,
 })
-})
+document.getElementById("userName").value='';
+document.getElementById("email").value='';
+document.getElementById("password").value='';
+}
+)
 .catch((error) => {
 const errorCode = error.code;
 const errorMessage = error.message;
 console.log(errorMessage);
-alert(error);
-
+alert("The Account is not registered");
+document.getElementById("userName").value='';
+document.getElementById("email").value='';
+document.getElementById("password").value='';
 });
 })
 
@@ -68,8 +73,9 @@ document.getElementById("SignIn").addEventListener("click",function () {
 const errorCode = error.code;
 const errorMessage = error.message;
 console.log(errorMessage);
-alert(error);
-
+alert("plasse Enter a valid account");
+document.getElementById("userName2").value='';
+document.getElementById("password2").value='';
 });
 })
 
