@@ -255,6 +255,21 @@ body {
   border-radius: 5px;
   border-right: 5px solid #f538eb6b;
 }
+@media (max-width:767px) {
+  .projects .content{
+    border-bottom: 5px solid #f538eb6b;
+    border-right: none;
+    margin: 0px !important;
+    padding: 0px !important;
+    height: fit-content;
+  }
+  .projects .content ul{
+    margin: 0px !important;
+  }
+  .projects .content h2{
+    width: fit-content;
+  }
+}
 .projects .content ul li{
   font-family: "Alkatra", cursive;
   width: 100%;

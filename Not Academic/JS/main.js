@@ -74,3 +74,21 @@ nav.forEach(ele => {
     }
   });
 });
+
+
+let span = document.querySelector('.up');
+window.onscroll = function (){
+  if(this.scrollY >= 500){
+    span.style.right = "20px";
+  }else{
+    span.style.right = "-55px";
+  }
+  console.log(this.scrollY);
+  console.log(span.style.right);
+}
+span.onclick = function(){
+  window.scrollTo({
+    top:0,
+    behavior :"smooth",
+  });
+}
