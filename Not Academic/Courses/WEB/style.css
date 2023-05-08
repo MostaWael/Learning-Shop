@@ -255,7 +255,7 @@ body {
   border-radius: 5px;
   border-right: 5px solid #f538eb6b;
 }
-@media (max-width:767px) {
+@media (max-width:991px) {
   .projects .content{
     border-bottom: 5px solid #f538eb6b;
     border-right: none;
@@ -289,5 +289,16 @@ body {
   background-color: var(--textWhite50);
   color: var(--black-color);
 }
-
+.projs::-webkit-scrollbar{
+  width: 10px;
+}
+.projs::-webkit-scrollbar-track{
+  background-color: var(--main-color);
+  border-radius: 20px;
+}
+.projs::-webkit-scrollbar-thumb{
+  background-color: var(--black-color);
+  border-radius: 20px;
+  border: 3px solid var(--main-color);
+}
 /* end HTML */

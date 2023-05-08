@@ -11,43 +11,35 @@ lessons.forEach(ele => {
     console.log(list);
   });
 });
-
-// let nav = document.querySelectorAll(".navbar-nav > li > a");
-// let landing = document.querySelectorAll(".landing > div");
-// nav.forEach(ele => {
-//   ele.addEventListener('click', e => {
-//     nav.forEach(x => {
-//       x.classList.remove("active");
-//     });
-//     e.target.classList.add("active");
-//     if (e.target.classList.contains("inpage")) {
-//       if (e.target.textContent.includes("HTML")) {
-//         landing[0].style.cssText = "left : 0%;";
-//         landing[1].style.cssText = "left : -100%;";
-//         landing[2].style.cssText = "left : -200%;";
-//       }
-//       else if (e.target.textContent.includes("Lessons")) {
-//         landing[0].style.cssText = "left : 100%;";
-//         landing[1].style.cssText = "left : 0%;";
-//         landing[2].style.cssText = "left : -100%;";
-//       }
-//       else {
-//         landing[0].style.cssText = "left : 200%;";
-//         landing[1].style.cssText = "left : 100%;";
-//         landing[2].style.cssText = "left : 0%;";
-//       }
-//     }
-//   });
-// });
-
-
-
+let images = {
+  "easy": ["../../image/ez1.jpeg",
+    "../../image/ez2.png", "../../image/ez2.webp", "../../image/ez3.png", "../../image/ez4.jpg"]
+  ,
+  "medium": ["../../image/med.webp", "../../image/med1.jpg", "../../image/med2.png", "../../image/med3.jpeg"]
+  ,
+  "hard": ["../../image/hard1.jpg", "../../image/hard2.jpeg", "../../image/hard3.png"],
+  "all" : ["../../image/ez1.jpeg","../../image/hard1.jpg", "../../image/hard2.jpeg", "../../image/hard3.png",
+    "../../image/ez2.png", "../../image/ez2.webp", "../../image/ez3.png", "../../image/ez4.jpg", "../../image/med.webp",
+    "../../image/med1.jpg", "../../image/med2.png", "../../image/med3.jpeg"]
+};
+let screen = document.querySelector(".projs");
 let projectLvl = document.querySelectorAll(".projects > .content > ul > li");
 projectLvl.forEach(ele => {
   ele.addEventListener('click', e => {
     projectLvl.forEach(x => {
       x.classList.remove("active");
     });
+    screen.innerHTML = "";
     e.target.classList.add("active");
+    let content = images[e.target.classList[0]];
+    content.forEach(img => {
+      screen.innerHTML += `<div class = "col mt-3">
+                            <img src = "${img}" class = "img-fluid rounded-3 h-75 w-100">
+                          </div>`;
+    });
   });
 });
+
+window.onload = function() {
+  
+};
