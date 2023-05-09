@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Front-End</title>
+    <title>Document</title>
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,11 +13,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fruktur:ital@1&display=swap" rel="stylesheet">
     <!-- CSS Files -->
+
     <link rel="stylesheet" href="../../CSS/all.min.css">
     <link rel="stylesheet" href="../../Bootstarp/css/all.min.css">
     <link rel="stylesheet" href="../../Bootstarp/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../CSS/learning-shop.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../WEB/style.css">
 </head>
 <body>
   <span class="up"><i class="fa-solid fa-arrow-up"></i></span>
@@ -35,11 +36,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
           <li class="nav-item"><a href="../../../Login/landing.html">Home</a></li>
-          <li class="nav-item"><a href="../../index.html">Professional</a></li>
-          <li class="nav-item"><a href="../WEB/web.html">Web Development</a></li>
-          <li class="nav-item"><a href="#" class="active inpage">HTML</a></li>
-          <li class="nav-item"><a href="#" class="inpage">Lessons</a></li>
-          <li class="nav-item"><a href="#" class="inpage">Projects</a></li>
+          <li class="nav-item"><a href="../../../Not Academic/index.html" class="active">Professional Course</a></li>
+          <li class="nav-item"><a href="#FD">Native Mobile</a></li>
+          <li class="nav-item"><a href="#BD">Cross-Platform</a></li>
           </ul>
           <div class="user d-flex gap-2 align-items-center ms-lg-4 justify-content-end">
           <div class="lightMode rounded-pill ps-1 pe-1 d-flex align-items-center position-relative me-lg-3 me-auto">
@@ -83,7 +82,7 @@
           document.getElementById("logOut").addEventListener("click",function () {
               signOut(auth).then(() => {
                 // Sign-out successful.
-                  location.replace("../Login/index.html")
+                  location.replace("/Login/index.html")
               }).catch((error) => {
                 // An error happened.
                   alert("Errro.............");
@@ -96,129 +95,61 @@
       </div>
   </nav>
   <!-- End navbar -->
-  <div class="container landing position-relative overflow-hidden" style="height: calc(100vh - 292px);">
-    <div id="box1" class="row justify-content-around gap-5 position-absolute box1 open">
+  <!-- start landing -->
+  <div class="container landing">
+    <div class="row justify-content-around gap-5">
       <div class="header col-sm-12 col-md-6 col-lg-6 text-center text-md-start order-2 order-md-0">
-        <h2 class="title">HTML <span class="ms-3 d-block fs-2" style="color: var(--main-color);">Hyper Text Markup Language</span></h2>
-        <p class="ps-1 lh-lg">It is a markup language that defines the structure of web pages. HTML consists of elements, also called tags, that wrap different parts of the content to make it appear or act a certain way. HTML can be assisted by technologies like CSS and JavaScript to enhance the appearance and functionality of web pages. HTML allows users to click links and be redirected to new pages. Web browsers receive HTML documents from a web server or local storage and render them into multimedia web pages.</p>
+        <h2 class="title">Mobile Application</h2>
+        <p class="ps-1 textWhite50 lh-lg">There are three categories of web developers: back-end developers, front-end developers, and full-stack developers. Back-end web developers create the website’s structure, write code, and verify the code works. Front-end web developers create the visual elements of a website using HTML, CSS, and JavaScript. Full-stack developers are proficient in both front-end and back-end development.</p>
+        <button class="btn1 p-2 ps-5 pe-5 rounded-4 mt-3" style="height: 50px;background-color:var(--main-color);color:var(--white)">Let's go</button>
       </div>
-      <div class="d-none d-md-flex col-sm-6 col-md-5 col-lg-4 align-items-center landing-img">
-        <img src="../../image/4860133.jpg" alt="" class="img-fluid">
-      </div>
-    </div>
-    <div id="box2" class="row lessons h-100 w-100 position-absolute box2 gap-2">
-      <div class="contant col-lg-3 overflow-auto h-100">
-        <h2 class="title">Lessons</h2>
-        <ul class="ms-2">
-          <li class="len">
-            <h6>Lesson 1</h6>
-            <ul class="len1">
-              <li>Introduction and What I Need To Learn</li>
-              <li>Elements and Browser</li>
-              <li>First Project And First Page</li>
-              <li>Head And Nested Elements</li>
-              <li>Comments and Use Cases</li>
-            </ul>
-          </li>
-          <li class="len">
-            <h6>Practice 1</h6>
-          </li>
-          <li class="len">
-            <h6>Lesson 2</h6>
-            <ul class="len2">
-              <li>Doctype And Standard And Quirks Mode</li>
-              <li>Headings And Use Cases</li>
-              <li>Syntax And Tests</li>
-              <li>Paragraph Element</li>
-              <li>Elements Attributes</li>
-            </ul>
-          </li>
-          <li  class="len">
-            <h6>Practice 2</h6>
-          </li>
-          <li class="len">
-            <h6>Lesson 3</h6>
-            <ul class="len3">
-              <li>Formatting Elements</li>
-              <li>Links – Anchor Tag</li>
-              <li>Image And Deal With Path</li>
-              <li>Lists – UL, OL, DL</li>
-              <li>Table</li>
-            </ul>
-          </li>
-          <li class="len">
-            <h6>Practice 3</h6>
-          </li>
-          <li class="len">
-            <h6>Lesson 4</h6>
-            <ul class="len4">
-              <li>Span And Break And Horizontal Rule</li>
-              <li>Div and How To Use</li>
-              <li>HTML Entities</li>
-              <li>Semantic Elements</li>
-              <li>Layout With Div And Classes</li>
-            </ul>
-          </li>
-          <li class="len">
-            <h6>Practice 4</h6>
-          </li>
-          <li class="len">
-            <h6>Lesson 5</h6>
-            <ul class="len5">
-              <li>Layout With Semantic Elements</li>
-              <li>Audio</li>
-              <li>Video</li>
-              <li>Form Part 1 – Input Types And Label</li>
-              <li>Form Part 2 – Required, Placeholder, Value</li>
-            </ul>
-          </li>
-          <li class="len">
-            <h6>Practice 5</h6>
-          </li>
-          <li class="len">
-            <h6>Lesson 6</h6>
-            <ul class="len6">
-              <li>Form Part 3 – Action, Name, Method</li>
-              <li>Form Part 4 – Hidden, Reset, Color, Range, Number</li>
-              <li>Form Part 5 – ReadOnly, Disabled, Autofocus</li>
-              <li>Form Part 6 – Radio And Checkbox</li>
-              <li>Form Part 7 – Select and Textarea</li>
-            </ul>
-          </li>
-          <li class="len">
-            <h6>Practice 6</h6>
-          </li>
-          <li class="len">
-            <h6>Lesson 7</h6>
-            <ul class="len7">
-              <li>Form Part 8 – File, Search, URL, Time</li>
-              <li>Form Part 9 – Data List, Novalidate, Target</li>
-              <li>Blockquote, Wbr, Bdi, Button</li>
-              <li>iFrame, Pre, Code</li>
-              <li>Accessibility Intro</li>
-              <li>ARIA And Screen Readers</li>
-            </ul>
-          </li>
-          <li class="len">
-            <h6>Practice 6</h6>
-          </li>
-        </ul>
-      </div>
-      <div class="screen col-lg-8 rounded-3">
-
+      <div class="d-none d-md-flex col-sm-6 col-md-5  col-lg-4 align-items-center landing-img">
+        <img src="/main page/image/mobail.jpg" alt="" class="img-fluid rounded-2">
       </div>
     </div>
-    <div id="box3" class="row projects h-100 ms-0 w-100 position-absolute box3 p-4 p-lg-5 rounded-3">
-      <div class="content col-sm-2 col-md-2 col-lg-4  flex-grow-1">
-        <h2 class="title fs-1">Projects</h2>
-        <ul class="ms-2 list-unstyled mt-5 fs-4 d-flex d-lg-block">
-          <li class="all m-3 active">ALL</li>
-          <li class="easy m-3">Easy</li>
-          <li class="medium m-3">Medium</li>
-          <li class="hard m-3">Hard</li>
-        </ul>
+  </div>
+  <!-- end landing -->
+  <div id="FD" class="front">
+    <div class="container pt-5" >
+      <div class="custom-header d-flex align-items-center flex-column">
+        <div class="title">
+          <h1>Native Mobile </h1>
+        </div>
       </div>
-      <div class="projs row row-cols-1 row-cols-md-2 row-cols-lg-3 col-sm-8 col-md-8 col-lg-9 overflow-auto h-100 mt-3 flex-grow-1">
+      <div class="row  mt-5">
+          <div class="m-2 p-5 col cardPage">
+            <h1 class="main-title">IOS</h1>
+              <ul class="list-unstyled">
+                <li >Objective-C</li>
+                <li>Swift</li>
+              </ul>
+            </div>
+            <div class="m-2 p-5 col cardPage">
+              <h1 class="main-title">Android</h1>
+              <ul class="list-unstyled">
+                <li>JAVA</li>
+                <li>Kotlin</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div id="BD" class="back mt-5">
+    <div class="container pt-5">
+      <div class="custom-header d-flex align-items-center flex-column">
+        <div class="title">
+          <h1>Cross-Platform </h1>
+        </div>
+      </div>
+      <div class="row m-5 cardPage justify-content-between align-items-center pe-5 ps-5">
+        <ul class="list-unstyled col-sm-12 col-md-6 col-lg-4 m-0">
+          <li >React Native</li>
+          <li>Flutter</li>
+          <li>Xamarin</li>
+        </ul>
+        <div class="col-sm-6 col-md-6 col-lg-4 image d-none d-lg-block">
+          <img src="/main page/image/cross.png" alt="" class="img-fluid">
+        </div>
       </div>
     </div>
   </div>
@@ -230,6 +161,10 @@
           <span style="color: var(--main-color);">L</span>Shop
         </a>
       </div>
+      <ul class="list-unstyled d-flex gap-2">
+        <li><a href="#FD" class="textWhite50">Native Mobile</a></li>
+        <li><a href="#BD" class="textWhite50">Cross-Platform</a></li>
+      </ul>
       <div class="social-container m-2">
         <a href="https://www.facebook.com/FreeWebsiteCode/" class="social">
           <i class="fa-brands fa-facebook-f"></i>
@@ -248,7 +183,6 @@
     <!-- end programming course-->
     <script src="../../Bootstarp/js/all.min.js"></script>
     <script src="../../Bootstarp/js/bootstrap.bundle.min.js"></script>
-    <script src="./main.js"></script>
     <script src="../../JS/main.js"></script>
-    </body>
+</body>
 </html>
