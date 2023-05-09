@@ -32,7 +32,7 @@
     font-size: 25px;
     font-weight: bold;
     background-color: var(--main-color);
-    transition: all 0.5s;
+    transition: all 3.5s;
   }
 
   .card::before {
@@ -52,7 +52,7 @@
     width: 100%;
     height: 100%;
     border-radius: 15px;
-    transition: all 1s;
+    transition: all 15s;
   }
 
   .card:hover:after {
@@ -69,11 +69,11 @@
     background-size: 110%;
   }
   .card4:hover:after {
-    background-image: url(/photo/medd.jpg);
+    background-image: url(../image/Kamal.jpg);
     background-size: 135%;
   }
   .card5:hover:after {
-    background-image: url(/photo/IMG-20230505-WA0014\ \(1\).jpg);
+    background-image: url(../image/diser.jpg);
     background-size: 100%;
   }
   .card6:hover:after {
