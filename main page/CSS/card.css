@@ -6,77 +6,77 @@
     --black-light-color:#242424;
   }
 .card {
-    position: relative;
-    width: 250px;
-    height: 350px;
-    background: var(--black-light-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    font-weight: bold;
-    border-radius: 15px;
-    cursor: pointer;
-    color: var(--white-color);
-  }
+  position: relative;
+  width: 250px;
+  height: 350px;
+  background: var(--black-light-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  color: var(--white-color);
+}
 
-  .card::before,
-  .card::after {
-    position: absolute;
-    content: "";
-    width: 20%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    font-weight: bold;
-    background-color: var(--main-color);
-    transition: all 3.5s;
-  }
+.card::before,
+.card::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: var(--main-color);
+  transition: all 3.5s;
+}
 
-  .card::before {
-    top: 0;
-    right: 0;
-    border-radius: 0 15px 0 100%;
-  }
+.card::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
 
-  .card::after {
-    bottom: 0;
-    left: 0;
-    border-radius: 0 100%  0 15px;
-  }
+.card::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100%  0 15px;
+}
 
-  .card:hover::before,
-  .card:hover:after {
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    transition: all 15s;
-  }
+/* .card::before,
+.card::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 2s;
+} */
+/*
+.card::after {
+  background-image: url(../image/sabry.PNG);
+  background-size: 110%;
+}
+.card2::after {
+  background-image: url(../image/rabi3.jpg);
+  background-size: cover !important;
 
-  .card:hover:after {
-    background-image: url(../image/sabry.PNG);
-    background-size: 110%;
-  }
-  .card2:hover:after {
-    background-image: url(../image/rabi3.jpg);
-    background-size: cover !important;
-
-  }
-  .card3:hover:after {
-    background-image: url(../image/zozz.jpg);
-    background-size: 110%;
-  }
-  .card4:hover:after {
-    background-image: url(../image/Kamal.jpg);
-    background-size: 135%;
-  }
-  .card5:hover:after {
-    background-image: url(../image/diser.jpg);
-    background-size: 100%;
-  }
-  .card6:hover:after {
-    background-image: url(../image/YasserElshaikh.jpg);
-    background-size: 100%;
-  }
+}
+.card3::after {
+  background-image: url(../image/zozz.jpg);
+  background-size: 110%;
+}
+.card4::after {
+  background-image: url(../image/Kamal.jpg);
+  background-size: 135%;
+}
+.card5::after {
+  background-image: url(../image/diser.jpg);
+  background-size: 100%;
+}
+.card6::after {
+  background-image: url(../image/YasserElshaikh.jpg);
+  background-size: 100%;
+} */
