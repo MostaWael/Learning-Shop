@@ -5,7 +5,7 @@
   --main-color :#f538eb;
   --black-color:#000;
   --white-color:#fff;
-  --blue-color:#479DE0;
+  --blue-color:#1e85d4ef;
   --black-light-color:#242424;
   --textWhite50:#a6a3a3d4;
 }
@@ -327,11 +327,11 @@ footer ul li{
   height: 40px;
   width: 40px;
   transition: 0.5s;
-  color: var(--white-color);
+
 
 }
 .social-container a:hover {
-  background-color: var(--black-color);
-  color: var(--black-color);
+  background-color: var(--blue-color);
 }
+
 /* end footer */
