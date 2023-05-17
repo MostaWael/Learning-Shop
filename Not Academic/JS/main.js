@@ -1,5 +1,7 @@
 let root = document.querySelector(':root');
 window.onload = function () {
+  document.querySelector(".description").style.cssText = " transition:1s ;transform: translateX(0px);";
+  document.querySelector(".descriptioPhoto").style.cssText = " transition: 1s;transform: translateX(0px);";
   if (localStorage.Dark) {
     console.log(localStorage.Dark);
     let icon = document.querySelector(".icon-dark");
@@ -117,8 +119,16 @@ window.onscroll = function (){
   }else{
     span.style.right = "-55px";
   }
-  // console.log(this.scrollY);
-  // console.log(span.style.right);
+  if (this.scrollY >= 800) {
+    document.querySelectorAll(".category > div").forEach((ele) => {
+      ele.style.cssText = "transform: translateY(0px);";
+    });
+  }
+  if (this.scrollY >= 1200) {
+    document.querySelectorAll(".feat").forEach((ele) => {
+      ele.style.cssText = "transform: translateX(0px);";
+    });
+  }
 }
 span.onclick = function(){
   window.scrollTo({
