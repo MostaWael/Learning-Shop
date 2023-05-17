@@ -108,6 +108,12 @@ body {
     padding-top: 0px;
   }
 }
+.descriptioPhoto{
+  transform: translateX(1000px);
+}
+.description{
+  transform: translateX(-1000px);
+}
 /* end landing*/
 
 /* start front */

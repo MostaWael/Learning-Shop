@@ -1,7 +1,9 @@
 let root = document.querySelector(':root');
 window.onload = function () {
-  document.querySelector(".description").style.cssText = " transition:1s ;transform: translateX(0px);";
-  document.querySelector(".descriptioPhoto").style.cssText = " transition: 1s;transform: translateX(0px);";
+  if (document.querySelector("body .description"))
+    document.querySelector(".description").style.cssText = " transition:1s ;transform: translateX(0px);";
+  if (document.querySelector("body .descriptioPhoto"))
+    document.querySelector(".descriptioPhoto").style.cssText = " transition: 1s;transform: translateX(0px);";
   if (localStorage.Dark) {
     console.log(localStorage.Dark);
     let icon = document.querySelector(".icon-dark");
@@ -32,17 +34,6 @@ window.onload = function () {
     }
     icon.setAttribute("data-dark", isDark == "true" ? "false" : "true");
   }
-  screen.innerHTML = "";
-  projectLvl.forEach(ele => {
-    if (ele.classList.contains("active")){
-      let content = images[ele.classList[0]];
-      content.forEach(img => {
-        screen.innerHTML += `<div class = "col mt-3">
-                              <img src = "${img}" class = "img-fluid rounded-3 h-75 w-100">
-                            </div>`;
-      });
-    }
-  });
 }
 document.querySelector(".icon_container").onclick = function darkMode() {
   let icon = document.querySelector(".icon-dark");
@@ -76,11 +67,11 @@ document.querySelector(".icon_container").onclick = function darkMode() {
   setTimeout( () => {
     icon.classList.remove('animated');
   }, 500)
+  setTimeout(() => {
+    icon.classList.remove("animated");
+  }, 500);
 }
 
-setTimeout(() => {
-  icon.classList.remove("animated");
-}, 500);
 
 
 let nav = document.querySelectorAll(".navbar-nav > li > a");
@@ -103,6 +94,17 @@ nav.forEach(ele => {
         landing[2].style.cssText = "left : -100%;";
       }
       else {
+        screen.innerHTML = "";
+        projectLvl.forEach(ele => {
+          if (ele.classList.contains("active")){
+            let content = images[ele.classList[0]];
+            content.forEach(img => {
+              screen.innerHTML += `<div class = "col mt-3">
+                                    <img src = "${img}" class = "img-fluid rounded-3 h-75 w-100">
+                                  </div>`;
+            });
+          }
+        });
         landing[0].style.cssText = "left : 200%;";
         landing[1].style.cssText = "left : 100%;";
         landing[2].style.cssText = "left : 0%;";
@@ -120,14 +122,25 @@ window.onscroll = function (){
     span.style.right = "-55px";
   }
   if (this.scrollY >= 800) {
-    document.querySelectorAll(".category > div").forEach((ele) => {
-      ele.style.cssText = "transform: translateY(0px);";
-    });
+    if (document.querySelectorAll(".category > div")) {
+      document.querySelectorAll(".category > div").forEach((ele) => {
+        ele.style.cssText = "transform: translateY(0px);";
+      });
+    }
+  }
+  if (this.scrollY >= 1000) {
   }
   if (this.scrollY >= 1200) {
-    document.querySelectorAll(".feat").forEach((ele) => {
-      ele.style.cssText = "transform: translateX(0px);";
-    });
+    if (document.querySelectorAll(".course")) {
+      document.querySelectorAll(".course").forEach((ele) => {
+        ele.style.cssText = "transform: translateX(0px);";
+      });
+    }
+    if (document.querySelectorAll(".feat")) {
+      document.querySelectorAll(".feat").forEach((ele) => {
+        ele.style.cssText = "transform: translateX(0px);";
+      });
+    }
   }
 }
 span.onclick = function(){

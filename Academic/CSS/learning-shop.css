@@ -24,5 +24,10 @@
   top: -5%;
   transform: rotate(-45deg);
 }
-
+.descriptioPhoto{
+  transform: translateX(1000px);
+}
+.description{
+  transform: translateX(-1000px);
+}
 /* end landing */
