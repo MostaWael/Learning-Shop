@@ -336,3 +336,9 @@ footer ul li{
 }
 
 /* end footer */
+li:hover{
+  cursor: pointer;
+}
+.sec:hover{
+  cursor: pointer;
+}

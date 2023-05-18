@@ -69,3 +69,6 @@
     transform: rotateY(180deg);
   }
 }
+.hover:hover{
+  cursor: pointer;
+}

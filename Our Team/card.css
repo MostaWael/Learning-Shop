@@ -16,7 +16,6 @@
   font-size: 25px;
   font-weight: bold;
   border-radius: 15px;
-  cursor: pointer;
   color: var(--white-color);
 }
 
@@ -62,7 +61,7 @@
 .card2::after {
   background-image: url(../image/rabi3.jpg);
   background-size: cover !important;
-
+  
 }
 .card3::after {
   background-image: url(../image/zozz.jpg);
@@ -90,9 +89,10 @@
   height: 40px;
   width: 40px;
   transition: 0.5s;
-
+  
 
 }
 .social-1-container a:hover {
   background-color: var(--black-color);
+  cursor: pointer;
 }

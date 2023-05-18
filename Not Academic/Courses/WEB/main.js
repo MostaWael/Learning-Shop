@@ -33,9 +33,9 @@ projectLvl.forEach(ele => {
     e.target.classList.add("active");
     let content = images[e.target.classList[0]];
     content.forEach(img => {
-      screen.innerHTML += `<div class = "col mt-3">
-                            <img src = "${img}" class = "img-fluid rounded-3 h-75 w-100">
-                          </div>`;
+      screen.innerHTML += `<div class = "col mt-3" >
+      <a href="${img}" data-lightbox="my galary" ><img src = "${img}" class = "img-fluid rounded-3 h-75 w-100"></a>
+    </div>`;
     });
   });
 });
