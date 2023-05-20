@@ -33,19 +33,19 @@
             <div class="inputs-container">
               <!-- <input type="text" placeholder="Name" /> -->
               <div class="input-data">
-                <input type="text" id="userName" name="userName"/>
+                <input type="text" id="userName" name="userName" pattern="[A-Za-z]{4,}"/>
                 <div class="underline"></div>
                 <label>UserName</label>
               </div>
               <!--<input type="email" placeholder="Email" />-->
               <div class="input-data">
-                <input type="email"  id="email" name="email" required />
+                <input type="email"  id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
                 <div class="underline"></div>
                 <label>Email</label>
               </div>
               <!-- <input type="password" placeholder="Password" /> -->
               <div class="input-data" style="margin-bottom: 20px">
-                <input type="password" id="password" name="password" required />
+                <input type="password" id="password" name="password" required pattern="[0-9]{8,}"/>
                 <div class="underline"></div>
                 <label>Password</label>
               </div>
@@ -69,13 +69,13 @@
             <span style="display: block; margin-bottom: 30px">or use your account</span>
             <!-- <input type="email" placeholder="Email" /> -->
             <div class="input-data">
-              <input type="email" id="userName2" name="userName2" />
+              <input type="email" id="userName2" name="userName2" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
               <div class="underline"></div>
               <label>Email</label>
             </div>
             <!-- <input type="password" placeholder="Password" /> -->
             <div class="input-data" style="margin-bottom: 16px">
-              <input type="password" id="password2" name="password2" required/>
+              <input type="password" id="password2" name="password2" required pattern="[0-9]{8,}"/>
               <div class="underline"></div>
               <label>Password</label>
             </div>
