@@ -319,7 +319,7 @@ footer ul li{
 }
 
 .social-container a {
-  border: 1px solid var(--white-color);
+  border: 0px solid var(--white-color);
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
@@ -328,12 +328,14 @@ footer ul li{
   height: 40px;
   width: 40px;
   transition: 0.5s;
-
+  color: var(--white-color);
+  background-color: var(--black-color);
 
 }
-.social-container a:hover {
+/* .social-container a:hover {
+  border: 1px solid var(--white-color);
   background-color: var(--blue-color);
-}
+} */
 
 /* end footer */
 li:hover{
