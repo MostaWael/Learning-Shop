@@ -298,7 +298,7 @@ let chosen = false;
       chosen = true;
       if (ex) {
       Choose.forEach((x) => {
-        document.querySelector(`label[for="${x.id}"]`).style.cssText = "color:#fff;";
+        document.querySelector(`label[for="${x.id}"]`).style.cssText = "color:var(--white-color);";
       });
       ans[no] = e;
       document.querySelector(`label[for="${e.id}"]`).style.cssText = "color:var(--main-color);";
@@ -350,7 +350,7 @@ ex.addEventListener("click", (ele) => {
                                                   <button class="border-0 p-5 pt-2 pb-2 fs-3 rounded-2 mt-5 align-content-center m-auto" style="background-color:var(--main-color);color:var(--white-color);width: fit-content;">Start</button>
                                                 </div>`;
   document.querySelector(".note > button").addEventListener('click', () => {
-    document.querySelector('.screen').innerHTML = `<div class='QQ'>${Exam[num]}</div>`;
+    document.querySelector('.screen').innerHTML = `<div class='QQ textWhite50'>${Exam[num]}</div>`;
     document.querySelector('.screen').innerHTML += `<span class="swapIcn position-absolute bottom-0 m-4" style="right:0;"><i class="fa-solid fa-arrow-right p-2 rounded-2" style="background-color:var(--main-color) ;"></i></span>
                                                     <span class="swapDcn position-absolute bottom-0 m-4" style="right:5%;"><i class="fa-solid fa-arrow-left p-2 rounded-2" style="background-color:var(--main-color) ;"></i></span>
                                                     <span class="endEx position-absolute bottom-0 m-4 p-2 rounded-2" style="background-color:var(--main-color) ;">End Exam</span>`;
