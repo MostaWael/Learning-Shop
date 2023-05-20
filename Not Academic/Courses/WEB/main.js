@@ -17,7 +17,7 @@ let images = {
   ,
   "medium": ["../../image/med.webp", "../../image/med1.jpg", "../../image/med2.png", "../../image/med3.jpeg"]
   ,
-  "hard": ["../../image/hard1.jpg", "../../image/hard2.jpeg", "../../image/hard3.png"],
+  "hard": ["../../image/hard1.jpg", "../../image/hard2.jpeg", "../../image / hard3.png"],
   "all" : ["../../image/ez1.jpeg","../../image/hard1.jpg", "../../image/hard2.jpeg", "../../image/hard3.png",
     "../../image/ez2.png", "../../image/ez2.webp", "../../image/ez3.png", "../../image/ez4.jpg", "../../image/med.webp",
     "../../image/med1.jpg", "../../image/med2.png", "../../image/med3.jpeg"]
@@ -39,7 +39,3 @@ projectLvl.forEach(ele => {
     });
   });
 });
-
-window.onload = function() {
-  
-};

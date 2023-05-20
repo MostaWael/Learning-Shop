@@ -245,6 +245,27 @@ body {
 .screen{
   flex-grow: 1;
   border: 2px solid var(--textWhite50);
+  padding: 20px;
+}
+
+.res input{
+  appearance: none;
+}
+.choose{
+  width: fit-content;
+  font-size: 18px;
+  margin-left: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+.choose:hover::first-letter{
+  color: var(--main-color);
+}
+.true{
+  color: #00ff1f;
+}
+.false{
+  color: red;
 }
 .projects{
   background-color: var(--black-light-color);
