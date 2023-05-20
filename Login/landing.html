@@ -90,7 +90,24 @@
                                     })
                             }
                             read_db()
-
+                            var enterName = document.querySelector("#name");
+                            var enterEmail = document.querySelector("#emailid");
+                            var enterMassage = document.querySelector("#msgContent");
+                            var insertBtn = document.querySelector("#contactForm");
+                            function InsertData() {
+                                set(ref(db, "People/"+ `${localStorage.getItem("val")}/`),{
+                                    Name: enterName.value,
+                                    Email: enterEmail.value,
+                                    Massage: enterMassage.value
+                                })
+                                .then(()=>{
+                                    alert("Send Massage successfully");
+                                })
+                                .catch((error)=>{
+                                    alert("Error..............");
+                                });
+                            }
+                            insertBtn.addEventListener('click', InsertData);
                         // log out
                         document.getElementById("logOut").addEventListener("click",function () {
                             signOut(auth).then(() => {
@@ -269,15 +286,16 @@
                     </div>
                 </div>
                 <div class="contain mt-5 d-flex justify-content-center">
-                    <form action="#">
-                        <input type="text" class="main-input" placeholder="Your Name">
-                        <input type="email" class="main-input" placeholder="Your Email">
-                        <textarea name="message" class="main-input" placeholder="Your Message" style="max-width: 100%; width:667px; height :182px;"></textarea>
-                        <input type="submit" value="Send Message">
+                    <form >
+                        <input type="text" class="main-input" placeholder="Your Name" id="name" pattern="[A-Za-z]{4,}">
+                        <input type="email" class="main-input" placeholder="Your Email" id="emailid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        <textarea name="message" class="main-input" placeholder="Your Message" style="max-width: 100%; width:667px; height :182px;" id="msgContent"></textarea>
+                        <input type="submit" value="Send Message" id="contactForm">
                     </form>
                 </div>
             </div>
         </div>
+        <!-- <script src="/Login/contact.js"></script> -->
         <!-- end contact -->
         <!-- Start footer -->
         <footer>
