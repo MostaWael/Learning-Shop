@@ -20,8 +20,7 @@
         <link rel="stylesheet" href="./Bootstarp&icons/css/bootstrap.min.css">
         <link rel="stylesheet" href="./main page/CSS/card.css">
         <title>Learning shop</title>
-        <link rel="shortcut icon" href="./main page/image/elearning.png" type="image/x-icon" />
-
+        <link rel="shortcut icon" href="/main page/image/elearning.png" type="image/x-icon" />
     </head>
     <body>
         <nav class="navbar navbar-expand-lg pt-3 pb-3">
@@ -46,7 +45,6 @@
                         <li class="nav-item"><a href="#content">Content</a></li>
                         <li class="nav-item"><a href="#feat">Features</a></li>
                         <li class="nav-item"><a href="#contact">Contact us</a></li>
-                        <li class="nav-item"><a href="Our Team/index.html">Our Team</a></li>
                     </ul>
                     <div class="user d-flex gap-2 align-items-center ms-lg-4
                         justify-content-end">
@@ -64,8 +62,8 @@
                             <img src="./Not Academic/image/photo1.jpg" alt="user
                                 image" class="img-fluid rounded-pill">
                         </div> -->
-                        <div class="username" style="color:var(--main-color);" ><a href="./Login/index.html">Enter</a></div>
-                        <div class="logout position-relative ms-1"><a href="./Login/index.html">Register</a></div>
+                        <div class="username" style="color:var(--main-color);" ><a href="./Login/index.html" target="_blank">Enter</a></div>
+                        <div class="logout position-relative ms-1"><a href="./Login/index.html" target="_blank">Register</a></div>
                     </div>
                 </div>
             </div>
@@ -108,7 +106,7 @@
                 </div>
                 <div class="row category justify-content-around mt-4 gap-5
                     gap-md-0 gap-lg-0">
-                    <div class="col-sm-12 col-md-5 col-lg-5 p-4" onclick="confirm('Please Register an Account.. ')" >
+                    <div class="col-sm-12 col-md-5 col-lg-5 p-4 btn btn-open" onclick="funCall()" >
                         <div class="content text-center "
                             >
                             <div class="image">
@@ -136,7 +134,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-5 col-lg-5" onclick="confirm('Please Register an Account.. ')">
+                    <div class="col-sm-12 col-md-5 col-lg-5 btn btn-open" onclick="funCall()">
                         <div class="content text-center"
                             >
                             <div class="image">
@@ -237,7 +235,7 @@
                         <input type="text" class="main-input" placeholder="Your Name" pattern="[A-Za-z]{4,}">
                         <input type="email" class="main-input" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                         <textarea name="message" class="main-input" placeholder="Your Message"  style="max-width: 100%; width:667px; height :182px;"></textarea>
-                        <input type="submit" value="Send Message" onclick="confirm('Please Register anAccount . ')">
+                        <input type="submit" value="Send Message" onclick="funCall()">
                     </form>
                 </div>
             </div>
@@ -286,5 +284,6 @@
         <script src="./Not Academic/JS/main.js"></script>
         <script src="./Bootstarp&icons/js/all.min.js"></script>
         <script src="./Bootstarp&icons/js/bootstrap.bundle.min.js"></script>
+        <script src="/modal.js"></script>
     </body>
 </html>
