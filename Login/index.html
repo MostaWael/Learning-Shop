@@ -167,16 +167,16 @@ document.getElementById("password").value='';
 
        //  New login
 document.getElementById("SignIn").addEventListener("click",function () {
-    var userName2=document.getElementById("userName2").value;
+    var Email=document.getElementById("userName2").value;
     var password=document.getElementById("password2").value;
     localStorage.setItem("val",password);
     // alert(localStorage.getItem("val"));
-    signInWithEmailAndPassword(auth, userName2, password)
+    signInWithEmailAndPassword(auth, Email, password)
     .then((userCredential) => {
    // Signed in 
     const user = userCredential.user;
-    console.log(user);
-    location.replace("./lan.html")
+    // console.log(user);
+    location.replace("./lan.html");
 })
 .catch((error) => {
 const errorCode = error.code;
@@ -187,8 +187,6 @@ document.getElementById("userName2").value='';
 document.getElementById("password2").value='';
 });
 })
-
-
     </script>
   </body>
 </html>
