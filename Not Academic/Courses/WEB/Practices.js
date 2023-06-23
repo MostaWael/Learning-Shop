@@ -218,14 +218,14 @@ let Exam = [
     <input id='d' type='radio' name='ch' class=' m-2 ms-3' value='false'>
 </div>`,
   `<div class="res d-flex flex-column">
-    <h2 class='title'>4. The Uniform Resource Locator (URL) is a pathname to the file where the information is </h2>
-    <label for='a' class='choose'> a) stored</label>
+    <h2 class='title'>4. What is the smallest header in HTML by default?</h2>
+    <label for='a' class='choose'> a) h1</label>
     <input id='a' type = 'radio' name = 'ch' class= ' m-2 ms-3' value = 'false' >
-    <label for='b'  class='choose'>b) located</label>
+    <label for='b'  class='choose'>b) h3</label>
     <input id='b' type='radio' name='ch' class=' m-2  ms-3'value='true'>
-    <label for='c' class='choose'> c) saved</label>
+    <label for='c' class='choose'> c) h6</label>
     <input id='c' type='radio' name='ch' class=' m-2  ms-3'value='false'>
-    <label for ='d' class='choose'> d) transferred</label>
+    <label for ='d' class='choose'> d) h4</label>
     <input id='d' type='radio' name='ch' class=' m-2 ms-3' value='false'>
 </div>`,
 `<div class="res d-flex flex-column">
