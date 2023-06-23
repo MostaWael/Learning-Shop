@@ -275,9 +275,10 @@ footer a {
   border-color:#1da1f2 ;
 }
 
-.social-linkedin:hover {
-  background-color: #0072b1;
-  border-color: #0072b1;
+
+.social-google:hover {
+  background-color: #e91008;
+  border-color: #b11500;
 }
 
 

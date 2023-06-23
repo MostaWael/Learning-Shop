@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Password Reset</title>
+      <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+      <link rel="stylesheet" href="./reset.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+          rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Fruktur:ital@1&display=swap" rel="stylesheet">
+              <!-- CSS Files -->
+              <link rel="stylesheet" href="../main page/CSS/style.css">
+              <link rel="stylesheet" href="../Bootstarp&icons/css/all.min.css">
+              <title>Learning shop</title>
+              <link rel="shortcut icon" href="../main page/image/elearning.png" type="image/x-icon" />
+  </head>
+  <body>
+      <main>
+        <section class="container reset-container">
+          <fieldset>
+            <div class="logo">
+                  <span style="color: var(--main-color);" class="navbar-brand fs-6 Shop" ><span class="navbar-brand fs-6 Shop-2">L</span> Shop</span>
+          </div>
+            <div>
+              <input type="email" id="mail" name="mail" placeholder="Email"/>
+            </div>
+            <button id="resetPassword">Confirm</button>
+            <a id="loginbut" href="./index.html">Previous</a>
+
+          </fieldset>
+      </section>
+      <div class="feedbackContainer success">
+        <div class="feedbackIcon"></div>
+        <p class="feedbackMessage">Signed up Successfully</p>
+      </div>
+      <div class="feedbackContainer failure">
+        <div class="feedbackIcon"></div>
+        <p class="feedbackMessage">Signing up failed</p>
+      </div>   
+    </main> 
+    <script type="module" >
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-analytics.js";
+      import { getAuth,sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
+      const firebaseConfig = {
+          apiKey: "AIzaSyBGP9geSGxATeveOyjw4H02w0WzMvuZGO0",
+          authDomain: "learning-shop-f1ce4.firebaseapp.com",
+          projectId: "learning-shop-f1ce4",
+          storageBucket: "learning-shop-f1ce4.appspot.com",
+          messagingSenderId: "116015031423",
+          appId: "1:116015031423:web:444070cce6719c6c464b4a",
+          measurementId: "G-HXFVLTYDEJ"
+      };
+      const mailField = document.getElementById('mail');
+const labels = document.getElementsByTagName('label');
+const resetPassword = document.getElementById('resetPassword');
+const successModal = document.querySelector('.success');
+const failureModal = document.querySelector('.failure');
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth(app);
+
+//auth.languageCode = 'DE_de';
+
+auth.useDeviceLanguage();
+
+const resetPasswordFunction = () => {
+    const email = mailField.value;
+
+    sendPasswordResetEmail(auth,email)
+    .then(() => {
+        alert('Password Reset Email Sent Successfully!');
+    })
+    .catch(error => {
+      alert('Enter your Email??');
+    })
+}
+resetPassword.addEventListener('click', resetPasswordFunction);
+
+</script>
+  </body>
+</html>
