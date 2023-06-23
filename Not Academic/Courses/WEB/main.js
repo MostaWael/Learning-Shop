@@ -11,6 +11,7 @@ lessons.forEach(ele => {
     console.log(list);
   });
 });
+
 let images = {
   "easy": ["../../image/ez1.jpeg",
     "../../image/ez2.png", "../../image/ez2.webp", "../../image/ez3.png", "../../image/ez4.jpg"]

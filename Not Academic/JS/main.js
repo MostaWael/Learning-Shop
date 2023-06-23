@@ -83,6 +83,11 @@ nav.forEach(ele => {
     });
     e.target.classList.add("active");
     if (e.target.classList.contains("inpage")) {
+      document.querySelectorAll('.len > ul').forEach(e => {
+        if (e.classList.contains("show")) {
+          e.classList.remove("show");
+        }
+      });
       if (e.target.textContent.includes("HTML")) {
         landing[0].style.cssText = "left : 0%;";
         landing[1].style.cssText = "left : -100%;";

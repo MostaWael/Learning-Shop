@@ -210,6 +210,8 @@ body {
 }
 .lessons ul .len h6{
   position: relative;
+  margin-bottom: 0;
+  padding: 5px;
 }
 .lessons .len ul{
   margin-left: -20px;
@@ -241,6 +243,37 @@ body {
 
 .lessons ul li ul.show{
   height: 100%;
+}
+.respon-list{
+  display: block !important;
+  position: absolute;
+  background-color:var(--black-light-color);
+  width: calc(100% - 10%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0 0px 8px -1px;
+  height: 95% !important;
+  padding: 22px;
+  z-index: 100;
+}
+.respon-list::-webkit-scrollbar{
+  display: none;
+}
+.lesson-name {
+  text-indent: 30px;
+  position: relative;
+  width: fit-content;
+}
+.lesson-name::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  height: 2px;
+  background-color: var(--white-color);
+  left: 30px;
+  width: calc(100% - 30px);
 }
 .screen{
   flex-grow: 1;

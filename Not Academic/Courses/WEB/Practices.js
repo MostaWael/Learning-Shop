@@ -182,7 +182,7 @@ let Practices =
   </div>
   `],
   ]
-let Exam =[
+let Exam = [
 `<div class="res d-flex flex-column">
   <h2 class='title'>1. HTML is a set of markup__________</h2>
   <label for='a' class='choose'> a) tags</label>
@@ -289,57 +289,64 @@ let ans = ['','','','','','','','','',''];
 
 let DivPra = document.querySelectorAll('.par');
 function CHOOSE(ex, no) {
-let Choose = document.querySelectorAll('.res > input');
-let chosen = false;
+  let Choose = document.querySelectorAll('.res > input');
+  let chosen = false;
   Choose.forEach((e) => {
-  if (ex && ans[no] !== "") document.querySelector(`label[for="${ans[no].id}"]`).style.cssText = "color:var(--main-color);";
-    e.addEventListener('click', () => {
-      if (chosen && !ex) return;
-      chosen = true;
-      if (ex) {
-      Choose.forEach((x) => {
-        document.querySelector(`label[for="${x.id}"]`).style.cssText = "color:var(--white-color);";
-      });
-      ans[no] = e;
-      document.querySelector(`label[for="${e.id}"]`).style.cssText = "color:var(--main-color);";
-      return;
-    }
-    if (e.value === "true") {
-      document.querySelector(`label[for="${e.id}"]`).classList.add("true");
-    }
-    else {
-      document.querySelector(`label[for="${e.id}"]`).classList.add("false");
-      Choose.forEach(x => {
-        if (x.value === "true") document.querySelector(`label[for="${x.id}"]`).classList.add("true");
-        })
-    }
+    if (ex && ans[no] !== "") document.querySelector(`label[for="${ans[no].id}"]`).style.cssText = "color:var(--main-color);";
+      e.addEventListener('click', () => {
+        if (chosen && !ex) return;
+        chosen = true;
+        if (ex) {
+        Choose.forEach((x) => {
+          document.querySelector(`label[for="${x.id}"]`).style.cssText = "color:var(--white-color);";
+        });
+        ans[no] = e;
+        document.querySelector(`label[for="${e.id}"]`).style.cssText = "color:var(--main-color);";
+        return;
+      }
+      if (e.value === "true") {
+        document.querySelector(`label[for="${e.id}"]`).classList.add("true");
+      }
+      else {
+        document.querySelector(`label[for="${e.id}"]`).classList.add("false");
+        Choose.forEach(x => {
+          if (x.value === "true") document.querySelector(`label[for="${x.id}"]`).classList.add("true");
+          })
+      }
+    });
   });
-});
 }
 DivPra.forEach((ele) => {
-ele.addEventListener('click', () => {
-  let num = 0;
-  document.querySelector('.screen').innerHTML = `<div class='QQ'>${Practices[ele.classList[2].substring(3) - 1][num]}</div>`;
-  document.querySelector('.screen').innerHTML += `<span class="swapIcn position-absolute bottom-0 m-4" style="right:0;"><i class="fa-solid fa-arrow-right p-2 rounded-2" style="background-color:var(--main-color) ;"></i></span>
-                                                  <span class="swapDcn position-absolute bottom-0 m-4" style="right:5%;"><i class="fa-solid fa-arrow-left p-2 rounded-2" style="background-color:var(--main-color) ;"></i></span>`;
-  num = num + 1;
-  let show = document.querySelector('.QQ');
-  CHOOSE(0, -1);
-  document.querySelector(".swapIcn").addEventListener('click', () => {
-    if (num != Practices[ele.classList[2].substring(3) - 1].length) {
-      show.innerHTML = Practices[ele.classList[2].substring(3) - 1][num];
-      num = num + 1;
-      CHOOSE(0, -1);
+  ele.addEventListener('click', (e) => {
+    let num = 0;
+    document.querySelector('.screen').innerHTML = `<div class='QQ'>${Practices[ele.classList[2].substring(3) - 1][num]}</div>`;
+    document.querySelector('.screen').innerHTML += `<span class="swapIcn position-absolute bottom-0 m-4" style="right:0;"><i class="fa-solid fa-arrow-right p-2 rounded-2" style="background-color:var(--main-color) ;"></i></span>
+                                                    <span class="swapDcn position-absolute bottom-0 m-4" style="right:5%;"><i class="fa-solid fa-arrow-left p-2 rounded-2" style="background-color:var(--main-color) ;"></i></span>`;
+    num = num + 1;
+    let show = document.querySelector('.QQ');
+    CHOOSE(0, -1);
+    document.querySelector(".swapIcn").addEventListener('click', () => {
+      if (num != Practices[ele.classList[2].substring(3) - 1].length) {
+        show.innerHTML = Practices[ele.classList[2].substring(3) - 1][num];
+        num = num + 1;
+        CHOOSE(0, -1);
+      }
+    });
+    document.querySelector(".swapDcn").addEventListener('click', () => {
+      if (num != 0) {
+        num = num - 1;
+        show.innerHTML = Practices[ele.classList[2].substring(3) - 1][num];
+        CHOOSE(0, -1);
+      }
+    });
+    if (Width.matches) {
+      document.querySelector("#box2 > .contant").classList.remove('respon-list');
     }
-  });
-  document.querySelector(".swapDcn").addEventListener('click', () => {
-    if (num != 0) {
-      num = num - 1;
-      show.innerHTML = Practices[ele.classList[2].substring(3) - 1][num];
-      CHOOSE(0, -1);
+    else {
+      document.querySelector("#box2 > .contant").style.display = "block";
     }
-  });
-})
+    document.querySelector(".lesson-name").innerHTML = `${e.target.textContent} :`;
+  })
 });
 
 let ex = document.querySelector(".ex");
@@ -387,4 +394,59 @@ ex.addEventListener("click", (ele) => {
       line-height: 5;">Your Result : ${cnt}</div>`;
     });
   });
+  if (Width.matches) {
+    document.querySelector("#box2 > .contant").classList.remove('respon-list');
+  }
+  else {
+    document.querySelector("#box2 > .contant").style.display = "block";
+  }
+  document.querySelector(".lesson-name").innerHTML = `${ele.target.textContent} :`;
 });
+
+
+
+// responsive lesson
+
+function Responsive(Width) {
+  if (Width.matches) {
+    // document.body.style.backgroundColor = "yellow";
+    document.querySelector(".respon-header").style.display = "block";
+    document.querySelector("#box2").style.cssText = "display: flex;flex-direction: column;";
+    document.querySelector(".screen").style.cssText = "width: 97%;margin: auto;height:80%;";
+    document.querySelector("#box2 > .contant").style.display = "none";
+    document.querySelector(".lesson-name").innerHTML = "";
+  }
+  else {
+    document.querySelector(".respon-header").style.display = "none";
+    document.querySelector("#box2 > .contant").style.display = "block";
+    document.querySelector("#box2 > .contant").classList.remove('respon-list');
+    document.querySelector("#box2").style.cssText = "display: gird;";
+    document.querySelector(".screen").style.cssText = "margin: 0;";
+  }
+}
+
+
+document.querySelectorAll(".len > ul > li").forEach(li => {
+  li.addEventListener('click', e => {
+    document.querySelector(".screen").innerHTML = "";
+    if (Width.matches) {
+      document.querySelector("#box2 > .contant").classList.remove('respon-list');
+    }
+    else {
+      document.querySelector("#box2 > .contant").style.display = "block";
+    }
+    document.querySelector(".lesson-name").innerHTML = `${e.target.textContent} :`;
+  })
+});
+
+
+var Width = window.matchMedia("(max-width: 992px)")
+Responsive(Width)
+Width.addListener(Responsive)
+
+
+function openList() {
+  document.querySelector("#box2 > .contant").classList.add('respon-list');
+}
+
+
